@@ -1,6 +1,6 @@
 import { StudentDashboardCourseLists } from '../../Layout/DashboardCourseLists'
 import CourseOptionsButton from '../Layout/CourseOptionsButton'
-import DashboardAside from '../Layout/DashBoardAside'
+import DashboardAside from '../Layout/DashboardAside/DashboardAside'
 import DashboardCards from '../Layout/DashboardCards'
 import SideBar from '../Layout/SideBar'
 
