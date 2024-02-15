@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='box-border'>
       <Routes>
-        <Route path='/mydashboard' element={<StudentDashboard />} />
+        <Route path='/' element={<StudentDashboard />} />
       </Routes>
     </div>
   )

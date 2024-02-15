@@ -9,7 +9,7 @@ const SideBar = () => {
       <ul role="list" className="grid container gap-8 text-[#646464] lg:ml-1.5 xl:pr-3 pr-10 font-Urbanist text-sm font-semibold leading-[19.6px]">
 
         <li className="">
-          <NavLink to="/mydashboard"
+          <NavLink to="/"
             className={({ isActive }) =>
             (isActive ? activeClass
               : inactiveClass)}>
