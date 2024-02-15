@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
+import StudentDashboard from './components/Student/Pages/StudentDashboard';
 
 
 function App() {
 
   return (
     <div className='box-border'>
-      {/* <Routes>
+      <Routes>
         <Route path='/mydashboard' element={<StudentDashboard />} />
-        <Route path='/admin-dashboard' element={<AdminDashboard />} />
-      </Routes> */}
+      </Routes>
     </div>
   )
 }
