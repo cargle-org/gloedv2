@@ -3,6 +3,7 @@ import { TbCube } from "react-icons/tb";
 import Button from "../../UI/Button";
 import SideBar from "../Layout/SideBar";
 import CourseAsideDetails from "../Layout/CourseDetails/CourseAsideDetails";
+import CourseDetailsTutorials from "../Layout/CourseDetails/CourseDetailsTutorials";
 
 /**
  * Renders the details of a course, including the course title, description, tutorials, and related buttons.
