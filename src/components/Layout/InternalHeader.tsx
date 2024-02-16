@@ -1,5 +1,5 @@
 import Logo from "../../assets/svgs/Logo"
-import avatar from '../../assets/Avatar.png';
+import avatar from "../../assets/images/avatar.png"
 import { CiSettings } from "react-icons/ci";
 import { LuBell } from "react-icons/lu";
 
