@@ -28,6 +28,7 @@ const AdminDashboard = () => {
   const hideAddTest = () => {
     setIsAddTest(false)
   }
+
   return (
     <main className="flex container mx-auto max-w-[300px] sm:max-w-[400px] md:max-w-[610px] lg:max-w-[700px] xl:max-w-full 2xl:max-w-[1440px] mb-20 lg:mt-2">
       <AdminSideBar />
