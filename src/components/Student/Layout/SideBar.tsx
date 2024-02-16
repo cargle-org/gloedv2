@@ -6,8 +6,7 @@ const SideBar = () => {
 
   return (
     <aside className="col-span-1 hidden 2xl:block ml-5 3xl:ml-0 items-center " aria-label="Sidebar">
-      <ul role="list" className="grid container gap-8 text-[#646464] lg:ml-1.5 xl:pr-3 pr-10 font-Urbanist text-sm font-semibold leading-[19.6px]">
-
+      <ul role="list" className="grid w-[198px] container gap-8 text-[#646464] xl:pr-4 pr-10 font-Urbanist text-sm font-semibold leading-[19.6px]">
         <li className="">
           <NavLink to="/"
             className={({ isActive }) =>
