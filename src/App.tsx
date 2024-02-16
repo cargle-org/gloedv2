@@ -11,7 +11,7 @@ function App() {
     <div className='box-border'>
       <InternalHeader />
       <Routes>
-        <Route path='/mydashboard' element={<StudentDashboard />} />
+        <Route path='/' element={<StudentDashboard />} />
         <Route path='/admin-dashboard' element={<AdminDashboard />} />
       </Routes>
     </div>
