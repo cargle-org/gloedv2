@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const AdminSideBar = () => {
-  const activeClass = "flex items-center pl-4 gap-3 bg-primary/10 w-[198px] py-3.5 rounded-lg text-primary fill-primary"
+  const activeClass = "flex items-center pl-4 gap-3 bg-primary/10 max-w-[198px] py-3.5 rounded-lg text-primary fill-primary"
   const inactiveClass = "flex items-center pl-4 gap-3 fill-[#646464]";
 
   return (
