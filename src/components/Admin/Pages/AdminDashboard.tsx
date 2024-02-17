@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import AdminSideBar from '../Layout/AdminSideBar'
-import AdminCourseOptionsButton from '../Layout/AdminCourseOptionsButton';
+import AdminCourseOptionsButton from '../Layout/AdminDashboard/AdminCourseOptionsButton';
 import { AdminDashboardCourseLists } from '../../Layout/DashboardCourseLists';
-import AdminDashboardCards from '../Layout/AdminDashboardCards';
+import AdminDashboardCards from '../Layout/AdminDashboard/AdminDashboardCards';
 import Button from '../../UI/Button';
 import CreateClass from '../Layout/Modals/CreateClass';
 import CreateTest from '../Layout/Modals/CreateTest';

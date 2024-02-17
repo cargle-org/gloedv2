@@ -1,4 +1,4 @@
-import coursedetailsimg from '../../assets/images/dashboardcourseimg.png'
+import coursedetailsimg from '../../../assets/images/dashboardcourseimg.png'
 import Button from '../../UI/Button'
 
 const AdminCourseAsideDetails = (props: any) => {

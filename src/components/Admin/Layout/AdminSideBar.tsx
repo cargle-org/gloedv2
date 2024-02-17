@@ -6,7 +6,7 @@ const AdminSideBar = () => {
 
   return (
     <aside className="font-Urbanist col-span-1 hidden 2xl:block ml-5 items-center" aria-label="Sidebar">
-      <ul role="list" className="grid gap-8 text-[#646464] xl:pr-4 3xl:pr-6 pr-10 font-Urbanist text-sm font-semibold leading-[19.6px]">
+      <ul role="list" className="grid w-[198px] gap-8 text-[#646464] xl:pr-4 pr-10 font-Urbanist text-sm font-semibold leading-[19.6px]">
 
         <li className="">
           <NavLink to="/admin-dashboard"

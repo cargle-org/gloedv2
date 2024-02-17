@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { TbCube } from 'react-icons/tb'
-import coursedetailsimg from '../../assets/images/dashboardcourseimg.png'
-import avatar from '../../../assets/tutoravatar.svg'
+import coursedetailsimg from '../../../../assets/images/dashboardcourseimg.png'
+import avatar from '../../../../assets/images/avatar.png'
 import Button from '../../../UI/Button'
 
 const CourseAsideDetails = ({ hasPaid }: any) => {
