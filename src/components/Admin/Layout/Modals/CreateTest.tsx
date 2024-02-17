@@ -1,8 +1,8 @@
-import Input from "../../UI/Input";
-import Forms from "../../UI/Forms";
-import Textarea from "../../UI/Textarea";
+import Input from "../../../UI/Input";
+import Forms from "../../../UI/Forms";
+import Textarea from "../../../UI/Textarea";
 import { IoClose } from "react-icons/io5";
-import Button from "../../UI/Button";
+import Button from "../../../UI/Button";
 
 interface CreateTestProps {
   onClose: (data: any) => React.MouseEventHandler<HTMLButtonElement> | void;

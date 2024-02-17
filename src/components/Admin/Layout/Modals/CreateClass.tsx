@@ -1,10 +1,10 @@
-import Input from "../../UI/Input";
-import Forms from "../../UI/Forms";
-import Textarea from "../../UI/Textarea";
+import Input from "../../../UI/Input";
+import Forms from "../../../UI/Forms";
+import Textarea from "../../../UI/Textarea";
 import { IoClose } from "react-icons/io5";
-import useInput from "../../hooks/use-input"
+import useInput from "../../../hooks/use-input"
 import { FaAngleRight } from "react-icons/fa6";
-import Button from "../../UI/Button";
+import Button from "../../../UI/Button";
 
 interface CreateClassProps {
   onClose: (data: any) => React.MouseEventHandler<HTMLButtonElement> | void;

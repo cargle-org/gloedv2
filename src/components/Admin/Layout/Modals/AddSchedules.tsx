@@ -1,9 +1,9 @@
-import Input from "../../UI/Input";
-import Forms from "../../UI/Forms";
+import Input from "../../../UI/Input";
+import Forms from "../../../UI/Forms";
 import { IoClose } from "react-icons/io5";
 import { HiOutlineCalendar } from "react-icons/hi";
 import { FaAngleRight } from "react-icons/fa6";
-import Button from "../../UI/Button";
+import Button from "../../../UI/Button";
 
 interface AddScheduledProps {
   onClose: (data: any) => React.MouseEventHandler<HTMLButtonElement> | void;
