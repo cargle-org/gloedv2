@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { TbCube } from 'react-icons/tb'
-import coursedetailsimg from '../../../assets/coursedetailsimg.png'
+import coursedetailsimg from '../../assets/images/dashboardcourseimg.png'
 import avatar from '../../../assets/tutoravatar.svg'
 import Button from '../../../UI/Button'
 

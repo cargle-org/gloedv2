@@ -4,8 +4,8 @@ import AdminCourseOptionsButton from '../Layout/AdminCourseOptionsButton';
 import { AdminDashboardCourseLists } from '../../Layout/DashboardCourseLists';
 import AdminDashboardCards from '../Layout/AdminDashboardCards';
 import Button from '../../UI/Button';
-import CreateClass from '../Layout/CreateClass';
-import CreateTest from '../Layout/CreateTest';
+import CreateClass from '../Layout/Modals/CreateClass';
+import CreateTest from '../Layout/Modals/CreateTest';
 
 const AdminDashboard = () => {
   const [isAddClass, setIsAddClass] = useState(false)

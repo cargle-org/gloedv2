@@ -1,4 +1,4 @@
-import dashboardcourseimg from '../../../assets/images/dashboardcourseimg.png'
+import coursedetailsimg from '../../assets/images/dashboardcourseimg.png'
 import Card from '../../../UI/Card';
 
 interface ClassHistoryCourseListsProps {
@@ -35,19 +35,19 @@ export default ClassHistoryCourseLists
 
 export const dashboardCourseLists: ClassHistoryCourseListsProps[] = [
   {
-    img: dashboardcourseimg,
+    img: coursedetailsimg,
     alt: "Dashboard courselist image",
     title: "Learn SQL Basics for Data Science Specialization.",
     description: "Clean & Hexagonal architectures, DDD, SAGA, Outbox, CQRS,",
   },
   {
-    img: dashboardcourseimg,
+    img: coursedetailsimg,
     alt: "Dashboard courselist image",
     title: "Learn SQL Basics for Data Science Specialization.",
     description: "Clean & Hexagonal architectures, DDD, SAGA, Outbox, CQRS,",
   },
   {
-    img: dashboardcourseimg,
+    img: coursedetailsimg,
     alt: "Dashboard courselist image",
     title: "Learn SQL Basics for Data Science Specialization.",
     description: "Clean & Hexagonal architectures, DDD, SAGA, Outbox, CQRS,",

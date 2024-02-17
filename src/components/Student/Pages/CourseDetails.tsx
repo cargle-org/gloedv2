@@ -24,7 +24,7 @@ const CourseDetails = () => {
               Learn SQL Basics for Data Science Specialization.
             </div>
 
-            <div className="inline-flex flex-wrap gap-2">
+            <div className="inline-flex flex-wrap gap-2 justify-center md:justify-start">
               <Button variant="dotted">
                 <TbCube className="h-4 w-4" />
                 5 Tutorials

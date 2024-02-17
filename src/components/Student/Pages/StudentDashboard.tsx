@@ -1,7 +1,7 @@
 import { StudentDashboardCourseLists } from '../../Layout/DashboardCourseLists'
-import CourseOptionsButton from '../Layout/CourseOptionsButton'
-import DashboardAside from '../Layout/DashboardAside/DashboardAside'
-import DashboardCards from '../Layout/DashboardCards'
+import CourseOptionsButton from '../Layout/Dashboard/CourseOptionsButton'
+import DashboardAside from '../Layout/Dashboard/DashboardAside'
+import DashboardCards from '../Layout/Dashboard/DashboardCards'
 import SideBar from '../Layout/SideBar'
 
 const StudentDashboard = () => {
