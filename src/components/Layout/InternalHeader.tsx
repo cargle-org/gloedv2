@@ -2,12 +2,15 @@ import Logo from "../../assets/svgs/Logo"
 import avatar from "../../assets/images/avatar.png"
 import { CiSettings } from "react-icons/ci";
 import { LuBell } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const InternalHeader = () => {
   return (
     <header className="flex justify-between items-center h-[100px] sm:h-30 pt-5 pb-12 sm:pb-8 px-3 sm:px-5 lg:px-8 2xl:px-[60px]">
       <div className="flex-shrink-0 sm:w-20">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </div>
 
       {/* //nav icons */}

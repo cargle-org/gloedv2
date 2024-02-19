@@ -12,6 +12,7 @@ import AdminForgotPassword from './components/Admin/Auth/AdminForgotPassword';
 import AdminLogin from './components/Admin/Auth/AdminLogin';
 import Login from './components/Student/Auth/Login';
 import SignUp from './components/Student/Auth/SignUp';
+import LandingPage from './components/Pages/LandingPage';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
     <div className='box-border'>
       <InternalHeader />
       <Routes>
-        <Route path='/' element={<StudentDashboard />} />
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/mydashboard' element={<StudentDashboard />} />
         <Route path='/admin-dashboard' element={<AdminDashboard />} />
         <Route path='/course-details' element={<CourseDetails />} />
         <Route path='/admin-course-details' element={<AdminCourseDetails />} />
