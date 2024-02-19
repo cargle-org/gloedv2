@@ -20,7 +20,6 @@ const HowItWorksSection = () => {
   }, [ref.current]); // Only re-create observer if ref changes
 
   useEffect(() => {
-    console.log(isIntersecting);
 
     if (isIntersecting) {
       ref.current?.querySelector('ul')

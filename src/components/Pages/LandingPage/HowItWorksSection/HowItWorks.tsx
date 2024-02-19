@@ -1,7 +1,7 @@
 import Card from "../../../UI/Card"
-import howitworksone from '../../../../assets/how_it_works_one.svg'
-import howitworkstwo from '../../../../assets/how_it_works_two.svg'
-import howitworksthree from '../../../../assets/how_it_works_three.svg'
+import howitworksone from '../../../../assets/svgs/how_it_works_one.svg'
+import howitworkstwo from '../../../../assets/svgs/how_it_works_two.svg'
+import howitworksthree from '../../../../assets/svgs/how_it_works_three.svg'
 
 interface HowItWorksProps {
   step: number,
