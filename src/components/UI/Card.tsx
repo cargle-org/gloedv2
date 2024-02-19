@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = (props) => {
-  const cardReviewStyles = "bg-[#1C1E23] rounded-xl p-6 sm:p-7 hover:scale-105 focus:scale-105 duration-300";
+  const cardReviewStyles = "bg-[#1C1E23] rounded-xl p-6 sm:p-7 md:p-8 hover:scale-105 focus:scale-105 duration-300";
   const cardHowitWorkStyles = "bg-[#F3F5F7] flex flex-shrink-0 rounded-2xl place-content-end items-end hover:scale-105 focus:scale-105 duration-300";
   const cardPricingStyles = "bg-[#F3F5F7] flex flex-shrink-0 rounded-xl p-6 sm:p-5 lg:p-8 xl:p-7 2xl:p-8 w-full hover:scale-105 duration-300";
   const courseCardStyles = "flex cursor-pointer items-start justify-center flex-shrink-0 rounded-lg shadow-lg shadow-[#10182814] px-5 sm:px-4 md:px-5 pt-6 pb-5 2xl:pb-8 hover:scale-105 duration-300";
