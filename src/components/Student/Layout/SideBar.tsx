@@ -8,7 +8,7 @@ const SideBar = () => {
     <aside className="col-span-1 hidden 2xl:block ml-5 3xl:ml-0 items-center " aria-label="Sidebar">
       <ul role="list" className="grid w-[198px] container gap-8 text-[#646464] xl:pr-4 pr-10 font-Urbanist text-sm font-semibold leading-[19.6px]">
         <li className="">
-          <NavLink to="/"
+          <NavLink to="/mydashboard"
             className={({ isActive }) =>
             (isActive ? activeClass
               : inactiveClass)}>
