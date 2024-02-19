@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import gloed_statistics from '../../../../assets/gloed_statistics.svg'
+import gloed_statistics from '../../../../assets/svgs/gloed_statistics.svg'
 import WhyLearn from './WhyLearn';
 
 
