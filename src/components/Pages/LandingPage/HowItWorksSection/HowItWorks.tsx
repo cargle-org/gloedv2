@@ -9,9 +9,9 @@ interface HowItWorksProps {
   figCaption: string
 }
 
-const HowItWorksSection = () => {
+const HowItWorks = () => {
   return (
-    <ul className=" flex flex-wrap md:flex-nowrap justify-between space-y-10 md:space-y-0 gap-6 lg:gap-12 xl:gap-6 animate-slideside300 opacity-0 md:w-[600px] lg:w-[710px] xl:w-[900px]">
+    <ul className=" flex flex-wrap md:flex-nowrap justify-between font-plus-jakarta-sans space-y-10 md:space-y-0 gap-6 lg:gap-12 xl:gap-6 animate-slideside300 opacity-1 md:w-[600px] lg:w-[710px] xl:w-[900px]">
       {howItWorks.map((step, index) => (
         <li key={index} className='flex w-full flex-col items-center gap-1 md:gap-6 space-y-2'>
           <Card variant='primary' className='w-[200px] h-[200px] md:w-[150px] md:h-[150px] lg:w-[170px] lg:h-[170px] xl:w-[200px] xl:h-[200px]'>
@@ -31,7 +31,7 @@ const HowItWorksSection = () => {
   )
 }
 
-export default HowItWorksSection;
+export default HowItWorks;
 
 export const howItWorks: HowItWorksProps[] = [
   {
