@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css'
 import AdminDashboard from './components/Admin/Pages/AdminDashboard';
 import StudentDashboard from './components/Student/Pages/StudentDashboard';
@@ -20,10 +20,13 @@ import CourseRequirements from './components/Student/Pages/CourseRequirements';
 
 
 function App() {
+  // Check for exact root path
+  const { pathname } = useLocation();
+  const isLandingPage = pathname === '/';
 
   return (
     <div className='box-border'>
-      <InternalHeader />
+      {!isLandingPage && <InternalHeader />}
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='*' element={<PageNotFound />} />

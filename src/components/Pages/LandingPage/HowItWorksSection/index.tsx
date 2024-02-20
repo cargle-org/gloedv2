@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import HowItWorks from './HowItWorks';
+import HowItWorks from './HowItWorks'
 
 const HowItWorksSection = () => {
   const classes = ["animate-slideside300", "animate-slidein300", "animate-slidein500", "animate-slidein700"];
@@ -65,4 +65,3 @@ const HowItWorksSection = () => {
 };
 
 export default HowItWorksSection
-
