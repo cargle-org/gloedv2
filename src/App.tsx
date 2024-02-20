@@ -13,6 +13,7 @@ import AdminLogin from './components/Admin/Auth/AdminLogin';
 import Login from './components/Student/Auth/Login';
 import SignUp from './components/Student/Auth/SignUp';
 import LandingPage from './components/Pages/LandingPage';
+import PageNotFound from './components/Pages/PageNotFound';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <InternalHeader />
       <Routes>
         <Route path='/' element={<LandingPage />} />
+        <Route path='*' element={<PageNotFound />} />
         <Route path='/mydashboard' element={<StudentDashboard />} />
         <Route path='/admin-dashboard' element={<AdminDashboard />} />
         <Route path='/course-details' element={<CourseDetails />} />
