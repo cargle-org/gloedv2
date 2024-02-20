@@ -4,13 +4,13 @@ import HowItWorksSection from "./HowItWorksSection/index"
 import ReviewSection from "./ReviewSection"
 import CompanyBenefitSection from "./CompanyBenefitSection"
 import Footer from "./FooterSection/Footer";
-import InternalHeader from "../../Layout/InternalHeader";
+import Header from "../../Layout/Header";
 
 const LandingPage = () => {
 
   return (
     <>
-      <InternalHeader />
+      <Header />
       <main className="flex flex-col font-plus-jakarta-sans">
         <HeroSection />
         <WhyLearnSection />
