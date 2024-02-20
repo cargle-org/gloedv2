@@ -85,11 +85,22 @@ module.exports = {
             transform: "translateY(0)"
           },
         },
+        slideside: {
+          from: {
+            opacity: "0",
+            transform: "translateX(-20px)"
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)"
+          },
+        },
       },
       animation: {
-        slidein300: "slidein 1s ease 300ms forwards",
-        slidein500: "slidein 1s ease 600ms forwards",
-        slidein700: "slidein 1s ease 900ms forwards",
+        slidein300: "slidein 1s ease 200ms forwards",
+        slidein500: "slidein 1s ease 400ms forwards",
+        slidein700: "slidein 1s ease 600ms forwards",
+        slideside300: "slideside 1s ease 700ms forwards",
       },
     },
   },
