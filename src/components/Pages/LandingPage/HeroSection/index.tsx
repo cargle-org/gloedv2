@@ -89,10 +89,10 @@ const HeroSection = () => {
           Gloed is designed to help you learn how to communicate with databases using a standard management language.
         </p>
         <div className="flex justify-center items-center mt-10 gap-3 sm:gap-6">
-          <Button type="button" variant="primary" className='animate-slidein700 opacity-0 '>
+          <Button type="button" variant="primary" className='animate-slidein700 opacity-0 text-xs sm:text-inherit sm:text-white'>
             Exposure courses
           </Button>
-          <Button className="text-[#363636] animate-slidein700 opacity-0" variant="white">
+          <Button className="text-[#363636] animate-slidein700 opacity-0 text-xs" variant="white">
             See Pricing
           </Button>
         </div>
