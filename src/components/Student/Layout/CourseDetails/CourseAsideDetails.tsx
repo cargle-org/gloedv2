@@ -50,11 +50,11 @@ const CourseAsideDetails = ({ hasPaid }: any) => {
 
           {!hasPaid && (
             <div className='flex justify-start flex-col h-full gap-3.5 p-5 pb-7 mt-5 w-[290px] lg:w-[332px] text-base font-Inter font-bold bg-white drop-shadow-xl rounded-md leading-[18px]'>
-              <Link to="" className='flex items-center gap-3.5 h-[38px] w-[245px] transform transition hover:underline hover:underline-offset-4 hover:text-primary hover:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-0 '>
+              <Link to="/course-requirements" className='flex items-center gap-3.5 h-[38px] w-[245px] transform transition hover:underline hover:underline-offset-4 hover:text-primary hover:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-0 '>
                 <TbCube className="h-4 w-4" />
                 View course requirements
               </Link>
-              <Link to="" className='flex items-center gap-3.5 h-[38px] w-[245px] transform transition hover:underline hover:underline-offset-4 hover:text-primary hover:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-0'>
+              <Link to="/authors-note" className='flex items-center gap-3.5 h-[38px] w-[245px] transform transition hover:underline hover:underline-offset-4 hover:text-primary hover:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-0'>
                 <TbCube className="h-4 w-4" />
                 View author’s note to you
               </Link>

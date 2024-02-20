@@ -74,7 +74,7 @@ const WhyLearnSection = () => {
 
         <div className="flex justify-center items-center xl:items-end mx-3 xl:mr-5 xl:ml-auto w-auto xl:max-w-[480px] 2xl:max-w-[605px]">
           <div className='flex lg:grow'>
-            <img src={gloed_statistics} className="h-full w-full object-contain object-center" alt=" Gloed company statistics" />
+            <img src={gloed_statistics} className="animate-slideside300 opacity-0 h-full w-full object-contain object-center" alt=" Gloed company statistics" />
           </div>
         </div>
       </div>

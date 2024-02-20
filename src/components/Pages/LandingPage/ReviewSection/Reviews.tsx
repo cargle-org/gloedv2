@@ -21,7 +21,7 @@ interface ReviewsProps {
 
 const Reviews = () => {
   return (
-    <ul className="flex flex-wrap items-center justify-center container mx-auto gap-6 animate-slideside300 opacity-0 2xl:max-w-[1200px] ">
+    <ul className="flex flex-wrap items-center justify-center container mx-auto gap-6 font-plus-jakarta-sans animate-slideside300 opacity-0 2xl:max-w-[1200px] ">
       {reviews.map((review, index) => (
         <Card key={index} variant="review" className="w-[285px] sm:w-[300px] md:w-[384px]">
           <h3 className="text-white font-semibold text-[17px] md:text-lg leading-[27px] tracking-[-0.36px]">

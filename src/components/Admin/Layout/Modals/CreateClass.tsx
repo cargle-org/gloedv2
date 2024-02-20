@@ -141,7 +141,7 @@ const CreateClass = (props: CreateClassProps) => {
             }} />
         </div>
 
-        <div className='flex justify-start items-center'>
+        <div className='flex justify-start items-center mt-6'>
           <Button variant="modal" className="bg-primary">
             Create class
             <FaAngleRight className="h-4 2-4" />

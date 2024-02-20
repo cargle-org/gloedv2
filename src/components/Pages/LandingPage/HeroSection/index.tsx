@@ -57,7 +57,7 @@ const HeroSection = () => {
   }, [isIntersecting]);
 
   return (
-    <section ref={ref} className="font-plus-jakarta-sans mt-24 xl:mt-36">
+    <section ref={ref} className="font-plus-jakarta-sans mt-24 md:mt-32 lg:mt-44">
       <div className="flex flex-col justify-center items-center container sm:container-sm lg:container-lg xl:max-w-[794px] mx-auto">
         <h1 className="text-center animate-slidein300 opacity-0 max-w-[300px] sm:container relative text-[#212121] font-bold text-3xl sm:text-[43px] md:text-[58px] lg:text-6xl xl:text-[72px] leading-[55px] sm:leading-[64px] md:leading-[93px] lg:leading-[100px] xl:leading-[108px] tracking-[-1.9px] sm:tracking-[-2.16px]">
           Become a data expert, <br />
@@ -89,10 +89,10 @@ const HeroSection = () => {
           Gloed is designed to help you learn how to communicate with databases using a standard management language.
         </p>
         <div className="flex justify-center items-center mt-10 gap-3 sm:gap-6">
-          <Button type="button" variant="primary" className='animate-slidein700 opacity-0 '>
+          <Button type="button" variant="primary" className='animate-slidein700 opacity-0 text-xs sm:text-inherit sm:text-white'>
             Exposure courses
           </Button>
-          <Button className="text-[#363636] animate-slidein700 opacity-0" variant="white">
+          <Button className="text-[#363636] animate-slidein700 opacity-0 text-xs" variant="white">
             See Pricing
           </Button>
         </div>

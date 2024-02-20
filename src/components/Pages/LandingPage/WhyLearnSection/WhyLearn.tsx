@@ -13,7 +13,7 @@ interface WhyLearnProps {
 
 const WhyLearn = () => {
   return (
-    <ul className="flex flex-col lg:h-[374px] sm:w-[400px] md:w-[430px] lg:w-[567px] animate-slideside300 opacity-0 mx-3 md:mx-auto gap-8 sm:gap-9 2xl:gap-11 my-16 lg:my-25">
+    <ul className="flex flex-col lg:h-[374px] sm:w-[400px] md:w-[430px] lg:w-[567px] font-plus-jakarta-sans animate-slideside300 opacity-0 mx-3 md:mx-auto gap-8 sm:gap-9 2xl:gap-11 my-16 lg:my-25">
       {textElements.map((text, id) => (
         <li key={id} className="flex mx-auto 2xl:mx-0 items-start gap-3 md:gap-8 lg:gap-4 xl:gap-6 2xl:gap-8 2xl-max-w-[415px]">
           <span className="flex w-8 sm:w-10 xl:w-[50px] h-8 sm:h-10 xl:h-[50px] px-2 sm:px-3 bg-primary items-center justify-center rounded-md md:rounded-xl">
