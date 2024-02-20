@@ -14,6 +14,7 @@ import Login from './components/Student/Auth/Login';
 import SignUp from './components/Student/Auth/SignUp';
 import LandingPage from './components/Pages/LandingPage';
 import PageNotFound from './components/Pages/PageNotFound';
+import AuthorsNote from './components/Student/Pages/AuthorsNote';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/mydashboard' element={<StudentDashboard />} />
         <Route path='/admin-dashboard' element={<AdminDashboard />} />
         <Route path='/course-details' element={<CourseDetails />} />
+        <Route path='authors-note' element={<AuthorsNote />} />
         <Route path='/admin-course-details' element={<AdminCourseDetails />} />
         <Route path='/class-history' element={<ClassHistory />} />
         <Route path='/add-modules' element={<CreateCourseModule />} />
