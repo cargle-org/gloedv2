@@ -22,7 +22,7 @@ const CourseRequirements = () => {
           ))}
         </ul>
 
-        <Link to="/course-details" className="flex justify-center items-center mt-72">
+        <Link to="/course-details" className="flex justify-center items-center mt-72 mb-20">
           <div className="flex items-center justify-center w-[620px] h-[46px] text-white text-[13px] md:text-sm bg-[#000] font-medium rounded-[5px] leading-6 tracking-[-0.2px]">
             Ok great i get this. Close this!
           </div>
