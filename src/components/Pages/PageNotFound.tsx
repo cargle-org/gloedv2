@@ -9,7 +9,7 @@ const PageNotFound = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center -mt-28 lg:-mt-26 xl:-mt-28 h-screen">
       <h1 className="text-3xl font-bold text-red-500">
         404 Not Found
       </h1>

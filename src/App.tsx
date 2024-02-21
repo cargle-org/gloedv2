@@ -17,6 +17,7 @@ import PageNotFound from './components/Pages/PageNotFound';
 import AuthorsNote from './components/Student/Pages/AuthorsNote';
 import AuthorsProfile from './components/Student/Pages/AuthorsProfile';
 import CourseRequirements from './components/Student/Pages/CourseRequirements';
+import TutorialView from './components/Pages/TutorialView';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path='/admin-course-details' element={<AdminCourseDetails />} />
         <Route path='/class-history' element={<ClassHistory />} />
         <Route path='/add-modules' element={<CreateCourseModule />} />
+        <Route path='/view-tutorial' element={<TutorialView />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
         <Route path='/admin-login' element={<AdminLogin />} />
