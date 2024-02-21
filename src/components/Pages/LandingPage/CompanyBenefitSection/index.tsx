@@ -31,8 +31,10 @@ const CompanyBenefitSection = () => {
         ?.classList.add(classes[1]);
       ref.current?.querySelector('p')
         ?.classList.add(classes[2]);
-      ref.current?.querySelector('button')
-        ?.classList.add(classes[0]);
+      ref.current?.querySelectorAll('button')
+        .forEach(el => {
+          el.classList.add(classes[0]);
+        });
       ref.current?.querySelector('img')
         ?.classList.add(classes[0]);
     }
@@ -43,8 +45,10 @@ const CompanyBenefitSection = () => {
         ?.classList.remove(classes[1]);
       ref.current?.querySelector('p')
         ?.classList.remove(classes[2]);
-      ref.current?.querySelector('button')
-        ?.classList.remove(classes[0]);
+      ref.current?.querySelectorAll('button')
+        .forEach(el => {
+          el.classList.remove(classes[0]);
+        })
       ref.current?.querySelector('img')
         ?.classList.remove(classes[0]);
     }
@@ -96,12 +100,10 @@ const CompanyBenefitSection = () => {
 
         {/* community tutor image */}
         <div className="flex justify-center xl:justify-start 2xl:justify-end mx-3 md:mx-auto xl:ml-0 2xl:mx-0 3xl:mx-10 sm:mt-9 xl:mt-12 2xl:mt-10 relative lg:max-w-[567px] lg:h-[552px]">
-          <div className=" items-center px-2 py-1 xl:px-[16px] xl:py-[8px] absolute top-[110px] xl:top-[150px] left-[120px] lg:left-[133px] xl:left-[13px] 2xl:left-[50px] w-auto h-10 2xl:h-[52px] rounded-tr-[12px] rounded-s-[12px] bg-white gap-2.5">
-            {/* <button className="text-center bg-white text-base 2xl:text-lg font-normal text-[#0F172A] leading-[28.8px] font-Roboto text-nowrap">
-              Expert help from tutors
-            </button> */}
-          </div>
-          <div className="flex justify-center xl:justify-start 2xl:justify-end w-full h-fit xl:w-[480px] xl:h-full 2xl:w-full 2xl:h-[552px] ">
+          <button className="flex items-center w-auto sm:h-10 2xl:h-[52px] px-1.5 sm:px-2 sm:py-1 xl:px-4 xl:py-2 absolute z-40 top-20 sm:top-[100px] md:top-[150px] xl:top-[172px] 2xl:top-[150px] left-[2%] sm:left-3.5 md:left-[85px] xl:left-[30px] 2xl:left-6 rounded-tr-[15px] rounded-br-[3px] rounded-s-[15px] gap-2.5 text-center bg-white text-[11px] md:text-sm 2xl:text-lg font-normal text-[#0F172A] leading-[28.8px] font-Roboto text-nowrap animate-slideside300 opacity-0">
+            Expert help from tutors
+          </button>
+          <div className="relative flex justify-center xl:justify-start 2xl:justify-end w-full h-fit xl:w-[480px] xl:h-full 2xl:w-full 2xl:h-[552px] z-10">
             <img className="object-contain rounded-xl animate-slideside300 opacity-0" src={communitytutor} alt="community tutor image" />
           </div>
         </div>
