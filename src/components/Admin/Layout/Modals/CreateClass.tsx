@@ -20,9 +20,11 @@ const CreateClass = (props: CreateClassProps) => {
     blurInputHandler: nameBlurInputHandler
   } = useInput(value => value !== '')
 
-  let formIsValid = false
+  // let formIsValid = false;
 
-  if (enteredNameIsValid) formIsValid = true
+  // if (enteredNameIsValid) {
+  //   formIsValid = true
+  // }
 
   const formSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()

@@ -12,7 +12,7 @@ import CourseDetailsTutorials from "../Layout/CourseDetails/CourseDetailsTutoria
  */
 
 const CourseDetails = () => {
-  const [hasPaid, setHasPaid] = useState<Boolean>(false);
+  const hasPaid = useState<Boolean>(false);
 
   return (
     <>
