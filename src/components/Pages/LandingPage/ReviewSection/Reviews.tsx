@@ -1,7 +1,7 @@
 import Card from "../../../UI/Card"
-import reviewerone from '../../../../assets/images/reviewerone.png'
-import reviewertwo from '../../../../assets/images/reviewertwo.jpg'
-import reviewerthree from '../../../../assets/images/reviewerthree.jpg'
+import reviewerone from '../../../../assets/images/roland.png'
+import reviewertwo from '../../../../assets/images/peter.png'
+import reviewerthree from '../../../../assets/images/olayinka.png'
 
 interface ReviewsProps {
   title: string,
@@ -32,7 +32,7 @@ const Reviews = () => {
           </p>
           <div className="border my-7 opacity-20 border-[#90A3BF]"></div>
           <div className="flex gap-3.5 md:gap-5">
-            <img src={review.img} className="flex items-start object-cover" alt={review.alt} />
+            <img src={review.img} className="flex items-start object-cover w-24 h-24 rounded" alt={review.alt} />
             <h3 className="md:flex items-center text-white text-sm font-bold h-18 leading-[21px] tracking-[-0.42px]">
               {review.name}, {review.role}, {review.company}
             </h3>
@@ -49,29 +49,29 @@ export default Reviews
 export const reviews: ReviewsProps[] = [
   {
     "title": "Data is everything & Gloed helps",
-    "body": "We think of it as everyone's responsibility in the organization to be more data-driven. After all, every single one of us is probably touching data in some way, regardless of your role",
+    "body": " I had a 10 mins class session over a WhatsApp call, and it was phenomenal - I learnt, within 10mins, what now saves me 8hrs weekly. Thanks, Gloed",
     "img": reviewerone,
     "alt": "first reviewer image",
-    "name": "Gabriel Lages",
-    "role": "Business Intelligence and Analytics Manager",
+    "name": "Roland",
+    "role": "Data Analyst",
     "company": "Hotmart"
   },
   {
-    "title": "Satisfied User Here!",
-    "body": "On Gloed, you learn from the experts. As you are taking courses, you are really learning from the best instructors in the world.",
+    "title": "My team learns better now.",
+    "body": "The platform is self explanatory and easy to use. You can easily get your way around it with little or no supervision ✨",
     "img": reviewerthree,
     "alt": "second reviewer image",
-    "name": "Rachel Alt-Simmons",
-    "role": "Head Of Strategic Design, Data, Pricing And Analytics",
+    "name": "Olayinka",
+    "role": "Product Manager",
     "company": "AXA XL"
   },
   {
-    "title": "My team learners better now.",
-    "body": "As a manager, Gloed helps me show my team new packages and new ways to solve problems.",
+    "title": "Satisfied User Here!",
+    "body": "Instead of just learning theory, we were encouraged to apply what we learned to real-world scenarios. This not only made the material more engaging but also gave me the confidence to start using SQL in my own projects and work environments.",
     "img": reviewertwo,
     "alt": "third reviewer image",
-    "name": "Ofentswe Lebogo",
-    "role": "Data Scientist",
+    "name": "Peter",
+    "role": "Data Analyst",
     "company": "Council for Scientific and Industrial Research (CSIR)"
   },
 

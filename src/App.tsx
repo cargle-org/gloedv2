@@ -18,7 +18,7 @@ import AuthorsNote from './components/Student/Pages/AuthorsNote';
 import AuthorsProfile from './components/Student/Pages/AuthorsProfile';
 import CourseRequirements from './components/Student/Pages/CourseRequirements';
 import TutorialView from './components/Pages/TutorialView';
-
+import PrivacyPolicy from './components/Pages/PrivacyPolicy';
 
 function App() {
   // Check for exact root path
@@ -46,6 +46,7 @@ function App() {
         <Route path='/admin-login' element={<AdminLogin />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/admin-forgot-password' element={<AdminForgotPassword />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
       </Routes>
     </div>
   )
