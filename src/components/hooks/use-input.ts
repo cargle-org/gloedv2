@@ -15,7 +15,10 @@ const initialState: InputState = {
   isInput: false,
 };
 
-const inputStateReducer = (state: InputState, action: InputAction): InputState => {
+const inputStateReducer = (
+  state: InputState,
+  action: InputAction
+): InputState => {
   switch (action.type) {
     case "INPUT":
       return {
@@ -38,7 +41,10 @@ const inputStateReducer = (state: InputState, action: InputAction): InputState =
 };
 
 const useInput = (validateValue: (value: string) => boolean) => {
-  const [inputState, dispatchInput] = useReducer(inputStateReducer, initialState);
+  const [inputState, dispatchInput] = useReducer(
+    inputStateReducer,
+    initialState
+  );
 
   const inputIsValid = validateValue(inputState.value);
   const hasError = !inputIsValid && inputState.isInput;
