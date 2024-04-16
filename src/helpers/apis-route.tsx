@@ -1,0 +1,9 @@
+export const BASE_URL = 'https://gloed-api-v2-production.up.railway.app/';
+export const SIGNUP_URL = 'auth/register'
+export const LOGIN_URL = 'auth/login';
+export const ADMIN_LOGIN_URL = 'admin/login';
+export const ADMIN_SIGNUP_URL = 'admin/register';
+export const VERIFY_EMAIL = 'auth/verify-email';
+export const ADMIN_VERIFY_EMAIL = 'admin/verify-email';
+export const RESET_PASSWORD = 'auth/password-reset/request';
+export const CREATE_CLASS = 'class';
