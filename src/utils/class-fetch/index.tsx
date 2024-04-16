@@ -3,7 +3,7 @@ import {
   CREATE_CLASS,
 } from "../../helpers/apis-route";
 
-// /Type annotation******
+// /Add Types******
 export type createClassPayload = {
   className: string | null;
   description: string;
