@@ -1,12 +1,13 @@
 import { useRef } from "react";
+import { useParams } from "react-router-dom";
 import Input from "../../../UI/Input";
 import Forms from "../../../UI/Forms";
 import Textarea from "../../../UI/Textarea";
 import { IoClose } from "react-icons/io5";
-import useInput from "../../../hooks/use-input";
+import useInput from "../../../hooks/use-input"
 import { FaAngleRight } from "react-icons/fa6";
 import Button from "../../../UI/Button";
-import { createClassRequest } from "../../../../utils/class-fetch";
+import { editOneClassRequest } from "../../../../utils/class-fetch";
 import useHttp from "../../../hooks/use-https";
 import LoadingSpinner from "../../../UI/LoadingSpinner";
 
@@ -14,12 +15,13 @@ interface CreateClassProps {
   onClose: (data: any) => React.MouseEventHandler<HTMLButtonElement> | void;
 }
 
-const CreateClass = (props: CreateClassProps) => {
+const EditClass = (props: CreateClassProps) => {
+  const { classID } = useParams();
   const selectRef = useRef<HTMLSelectElement>(null);
   const selectValue = selectRef.current?.value;
 
-  const { sendRequest, status, error, data } =
-    useHttp(createClassRequest);
+  const { sendRequest: editClassRequest, status: editStatus, error: editError, data: editClassDetails } =
+    useHttp(editOneClassRequest);
 
   const {
     value: enteredClassname,
@@ -35,11 +37,13 @@ const CreateClass = (props: CreateClassProps) => {
     valueChangeHandler: classDescriptionInputChangeHandler,
     isValid: enteredClassDescriptionIsValid,
     blurInputHandler: classDescriptionBlurInputHandler
+
   } = useInput(value => value !== '');
 
   const {
     value: enteredFullname,
     hasError: inputFullnameError,
+    // reset: resetFullnameInput,
     valueChangeHandler: fullnameInputChangeHandler,
     isValid: enteredFullnameIsValid,
     blurInputHandler: fullnameBlurInputHandler
@@ -77,18 +81,27 @@ const CreateClass = (props: CreateClassProps) => {
     blurInputHandler: courseRequirementsBlurInputHandler
   } = useInput(value => value !== '');
 
+
   //render loading indicator
   let authState;
 
-  if (status === 'pending') {
+  if (editStatus === 'pending') {
     authState = (
       <LoadingSpinner />
     );
   }
 
+  // navigate back to coursedetails on successful login
+  if (editStatus === 'completed' && !editError) {
+    setTimeout(() => {
+      props.onClose;
+      window.location.reload();
+    }, 1500);
+    console.log("done")
+  }
+
   const formSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log(enteredClassname);
 
     if (!enteredClassnameIsValid && !enteredClassDescriptionIsValid
       && !enteredFullnameIsValid && !enteredRoleIsValid
@@ -108,9 +121,10 @@ const CreateClass = (props: CreateClassProps) => {
       slackChannelLink: enteredGrouplink,
     };
 
-    sendRequest(classData);
+    editClassRequest(classData, classID);
 
-    window.scrollTo(0, 0); // Scroll to top
+    //scroll to the top on submit
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
 
@@ -118,7 +132,7 @@ const CreateClass = (props: CreateClassProps) => {
     <Forms onClose={props.onClose} className="gap-10 h-screen">
       <div className="inline-flex justify-between items-center">
         <h1 className=" text-black font-Inter text-3xl md:text-[42px] font-bold leading-normal">
-          Create a class
+          Edit class
         </h1>
 
         {/* Close modal button */}
@@ -134,16 +148,16 @@ const CreateClass = (props: CreateClassProps) => {
       {authState}
       <div>
         {/* **Incorrect Class** */}
-        {error && (
+        {editError && (
           <div className="bg-red-200 p-0.5 mb-1 text-center">
-            "{error}"
+            "Error Updating Class!"
           </div>
         )}
 
         {/* **Successfully created Class** */}
-        {data && (
+        {editClassDetails && (
           <div className="bg-green-200 p-0.5 mb-1 text-center">
-            "Successfully created a class!"
+            "Successfully updated the class!"
           </div>
         )}
 
@@ -276,7 +290,7 @@ const CreateClass = (props: CreateClassProps) => {
 
           <div className='flex justify-start items-center mt-6'>
             <Button variant="modal" type="submit" className="bg-primary">
-              Create class
+              Edit class
               <FaAngleRight className="h-4 2-4" />
             </Button>
           </div>
@@ -286,4 +300,4 @@ const CreateClass = (props: CreateClassProps) => {
   )
 }
 
-export default CreateClass;
+export default EditClass;
