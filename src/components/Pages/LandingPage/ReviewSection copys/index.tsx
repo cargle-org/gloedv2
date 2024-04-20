@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import Reviews from './Reviews'
 
+/**
+ * Renders the review section with animations based on intersection with the viewport.
+ *
+ * @return {JSX.Element} The rendered review section component
+ */
 
 const ReviewSection = () => {
   const classes = ["animate-slideside300", "animate-slidein300", "animate-slidein500", "animate-slidein700"];
