@@ -8,7 +8,7 @@ interface ModalProps {
 
 const Backdrop = (props: ModalProps) => {
   return (
-    <div className="fixed h-[100vh] top-0 left-0 z-20 w-full bg-black/75" onClick={props.onClose}></div>
+    <div className="fixed h-[100vh] top-0 left-0 z-20 w-full bg-black/95" onClick={props.onClose}></div>
   )
 }
 

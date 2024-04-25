@@ -1,39 +1,42 @@
+import { useContext } from "react";
 import { TbCube } from "react-icons/tb"
-import Button from "../../../UI/Button"
+import { useNavigate, useParams } from "react-router-dom";
+import AuthContext from "../../../../store/auth-context";
+import Button from "../../../UI/Button";
 
-const CourseDetailsTutorials = () => {
+interface ModuleDetailsProps {
+  title: string;
+  _id: string;
+}
+
+const CourseDetailsTutorials = ({ moduleDetails }: { moduleDetails: ModuleDetailsProps[], moduleError: string | null }) => {
+  const navigate = useNavigate();
+  const { classID } = useParams();
+  const authCtx = useContext(AuthContext);
+  const isAdmin = authCtx?.isAdmin;
+
   return (
-    <ul className="flex flex-col gap-6 mt-7">
-      {tutorialLists.map((tutorial, index) => (
-        <Button key={index} variant="dotted" className="flex flex-wrap h-full md:h-[52px] text-[12.8px] md:text-sm">
-          <TbCube className="h-4 w-4" />
-          <span className="font-bold ">{tutorial.index} </span>
-          <div className="font-medium hidden sm:block">
-            {tutorial.title}
-          </div>
-        </Button>
-      ))}
-    </ul>
+    <div className='flex flex-col mx-0 min-w-[300px] sm:max-w-full lg:max-w-[637px]'>
+      <ul className="flex flex-col gap-6 mt-7">
+        {!moduleDetails && (
+          <p className="italic">"No Tutorial Available yet!"</p>
+        )}
+
+        {moduleDetails?.map((tutorial, index) => (
+          <Button
+            key={index}
+            variant="dotted"
+            onClick={() => navigate(`/class/${classID}/${isAdmin ? "getModule" : "getTutorial"}/${tutorial?._id}`)}>
+            <TbCube className="h-4 w-4" />
+            <span className="font-bold">Tutorial {index + 1}: </span>
+            <div className={`font-medium hidden sm:block `}>
+              {tutorial?.title.slice(0, 70) + (tutorial?.title.length > 70 ? "..." : "")}
+            </div>
+          </Button>
+        ))}
+      </ul>
+    </div>
   )
 }
 
-export default CourseDetailsTutorials
-
-export const tutorialLists = [
-  {
-    index: "Tutorial 1:",
-    title: "Introduction to microservices - A simple microservice system"
-  },
-  {
-    index: "Tutorial 2:",
-    title: "Orchestrating communication in microservices with Orkes"
-  },
-  {
-    index: "Tutorial 3:",
-    title: "Deploying microservices as a DevOps Engineer"
-  },
-  {
-    index: "Tutorial 4:",
-    title: "Complete this course by answering some related questions!"
-  }
-]
+export default CourseDetailsTutorials;

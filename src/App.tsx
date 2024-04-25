@@ -3,7 +3,7 @@ import './App.css'
 import AdminDashboard from './components/Admin/Pages/AdminDashboard';
 import StudentDashboard from './components/Student/Pages/StudentDashboard';
 import InternalHeader from './components/Layout/InternalHeader';
-import CourseDetails from './components/Student/Pages/CourseDetails';
+import CourseDetails from './components/Student/Pages/StudentCourseDetails';
 import ClassHistory from './components/Student/Pages/ClassHistory';
 import AdminCourseDetails from './components/Admin/Pages/AdminCourseDetails';
 import CreateCourseModule from './components/Admin/Pages/CreateCourseModule';

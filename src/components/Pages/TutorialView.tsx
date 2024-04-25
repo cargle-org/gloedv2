@@ -1,7 +1,7 @@
 import { FaAngleRight } from "react-icons/fa6"
 import Button from "../UI/Button"
-import TutorialViewSideBar from "../Layout/TutorialView.tsx/TutorialViewSideBar"
-import TutorialViewNavButtons from "../Layout/TutorialView.tsx/TutorialViewNavButtons";
+import TutorialViewSideBar from "../Layout/TutorialView/TutorialViewSideBar"
+import TutorialViewNavButtons from "../Layout/TutorialView/TutorialViewNavButtons";
 
 const TutorialView = () => {
   const isAdmin = true;

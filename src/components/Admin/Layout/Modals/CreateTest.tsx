@@ -27,7 +27,7 @@ const CreateTest = (props: CreateTestProps) => {
 
       {/* Modal Form */}
       <form className="">
-        <Input variant="modal" htmlFor="title" label="Test title" className="self-stretch p-3"
+        <Input variant="modal" htmlFor="title" label="Test title" className="self-stretch p-3 placeholder:text-[#000000]"
           input={{
             type: "text",
             name: "title",
@@ -100,4 +100,4 @@ const CreateTest = (props: CreateTestProps) => {
   )
 }
 
-export default CreateTest
+export default CreateTest;

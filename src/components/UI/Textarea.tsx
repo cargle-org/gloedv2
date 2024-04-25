@@ -1,16 +1,18 @@
+import React from "react";
 import { HiOutlineInformationCircle } from "react-icons/hi";
 
 interface TextareaProps {
   textarea: {
     value: string;
-    id?: string;
+    id: string;
     required?: boolean;
     placeholder?: string;
+    onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+    onBlur?: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   }
   label: string;
   htmlFor: string;
   variant: "module" | "modal"
-  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
   disabled?: boolean;
   className?: string;
   autoFocus?: boolean;
@@ -41,4 +43,4 @@ const Textarea = (props: TextareaProps) => {
   )
 }
 
-export default Textarea
+export default Textarea;
