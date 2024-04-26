@@ -10,8 +10,8 @@ interface DashboardCourseListsProps {
 }
 
 const DashboardAsideSchedule = ({ classes }: { classes: DashboardCourseListsProps[] }) => {
-  return (
 
+  return (
     <div className='flex flex-col border border-[#E0E0E0] border-b-white w-auto rounded-xl px-4 sm:px-3 xl:px-2.5'>
       <div className='flex items-center justify-center pt-3 md:pt-5 text-black font-Poppins text-lg font-semibold text-center leading-7'>
         Upcoming Class Schedule

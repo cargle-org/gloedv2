@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { StudentDashboardCourseLists } from '../../Layout/DashboardCourseLists'
 import CourseOptionsButton from '../Layout/Dashboard/CourseOptionsButton';
-import DashboardAside from '../Layout/CourseDetails/CourseAsideDetails';
 import DashboardCards from '../Layout/Dashboard/DashboardCards';
 import SideBar from '../Layout/SideBar';
 import useHttp from '../../hooks/use-https';
 import { getAllClassesRequest } from '../../../utils/class-fetch';
 import LoadingSpinner from '../../UI/LoadingSpinner';
+import DashboardAside from '../Layout/Dashboard/DashboardAside';
 
 interface DashboardCourseListsProps {
   img: string;
@@ -23,8 +23,6 @@ const StudentDashboard = () => {
 
   const { sendRequest, status, error, data: courseLists } =
     useHttp(getAllClassesRequest);
-
-  console.log(error);
 
   useEffect(() => {
     sendRequest();
@@ -58,7 +56,7 @@ const StudentDashboard = () => {
           <CourseOptionsButton />
           <StudentDashboardCourseLists classes={courseLists as DashboardCourseListsProps[]} />
         </main>
-        <DashboardAside classes={courseLists as DashboardCourseListsProps[]} />
+        <DashboardAside classes={courseLists} />
       </div>
     </div>
   )

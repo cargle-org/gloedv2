@@ -16,7 +16,6 @@ const CourseAsideDetails: React.FC<{ hasPaid: boolean }> = ({ hasPaid }) => {
 
   useEffect(() => {
     sendRequest(classID);
-    console.log(classDetails);
   }, []);
 
   //render loading indicator
