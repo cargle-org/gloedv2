@@ -1,4 +1,4 @@
-import dashboardcourseimg from '../../assets/dashboardcourseimg.png';
+import dashboardcourseimg from '../../assets/images/dashboardcourseimg.png';
 import Card from '../UI/Card';
 import { Link } from 'react-router-dom';
 
