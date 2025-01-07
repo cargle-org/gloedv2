@@ -9,12 +9,31 @@
 @tailwind utilities;
 
 .react-multi-carousel-track {
-  display: flex;
   gap: 32.37px;
 }
 
-.react-multi-carousel-item {
-  width: 488px !important;
+@media screen and (max-width: 640px) {
+  .react-multi-carousel-item {
+    width: 345px !important;
+    /* height: 479px !important; */
+    background: linear-gradient(
+      90deg,
+      rgba(232, 241, 255, 0.2) 0%,
+      rgba(69, 136, 236, 0.2) 100%
+    );
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .react-multi-carousel-item {
+    width: 488.631px !important;
+    height: 519.536px !important;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 241, 255, 0.2) 0%,
+      rgba(69, 136, 236, 0.2) 100%
+    );
+  }
 }
 
 .custom-dot-list-style {
