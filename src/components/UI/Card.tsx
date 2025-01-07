@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = (props) => {
   const cardReviewStyles =
-    "flex flex-shrink-0  pt-[32.45px] pb-[32.21px] md:pb-[43.75px] md:pt-[32.45px]";
+    "flex flex-shrink-0  pt-[32.45px] pb-[32.21px] lg:pb-[43.75px] lg:pt-[32.45px]";
   const cardHowitWorkStyles =
     "bg-[#F3F5F7] flex flex-shrink-0 rounded-2xl place-content-end items-end hover:scale-105 focus:scale-105 duration-300";
   const cardPricingStyles =
