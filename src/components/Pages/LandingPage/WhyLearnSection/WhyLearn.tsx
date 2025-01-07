@@ -1,8 +1,9 @@
-import { IoDocumentText } from "react-icons/io5"
-
 interface WhyLearnProps {
-  title: string,
-  description: string,
+  title: string;
+  description: string;
+  borderStyle: string;
+  titleColor: string;
+  positionStyle?: string;
 }
 
 /**
@@ -13,39 +14,50 @@ interface WhyLearnProps {
 
 const WhyLearn = () => {
   return (
-    <ul className="flex flex-col lg:h-[374px] sm:w-[400px] md:w-[430px] lg:w-[567px] font-plus-jakarta-sans animate-slideside300 opacity-0 mx-3 md:mx-auto gap-8 sm:gap-9 2xl:gap-11 my-16 lg:my-25">
+    <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:flex flex-col xl:flex-row font-SFPro animate-slideside300 opacity-0 mx-auto gap-7 ">
       {textElements.map((text, id) => (
-        <li key={id} className="flex mx-auto 2xl:mx-0 items-start gap-3 md:gap-8 lg:gap-4 xl:gap-6 2xl:gap-8 2xl-max-w-[415px]">
-          <span className="flex w-8 sm:w-10 xl:w-[50px] h-8 sm:h-10 xl:h-[50px] px-2 sm:px-3 bg-primary items-center justify-center rounded-md md:rounded-xl">
-            <IoDocumentText color='white' className='h-6 w-6' />
-          </span>
-          <div className="flex flex-col gap-3 items-start xl:w-[400px] 2xl:w-[412px]">
-            <div className="text-xl xl:text-2xl font-semibold text-white leading-[30px] sm:leading-[36px] tracking-[-0.72px]">
+        <li
+          key={id}
+          className={`flex mx-auto p-6 items-start gap-6 md:gap-8 border-[1px] md:border-[0.5px] rounded-lg ${text.borderStyle} ${text.positionStyle}`}
+        >
+          <div className={`flex flex-col gap-3 items-start ${text.titleColor}`}>
+            <div className="text-base md:text-xl font-bold leading-[26px]">
               {text.title}
             </div>
-            <div className="text-[#F7FAFF] text-sm xl:text-base md:text-wrap xl:w-auto font-normal leading-6">
+            <div className="text-[#212121] text-sm md:text-xl md:text-wrap font-[274] leading-6 md:leading-8">
               {text.description}
             </div>
           </div>
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default WhyLearn
+export default WhyLearn;
 
 const textElements: WhyLearnProps[] = [
   {
     title: "Comprehensive Curriculum",
-    description: "Dive into an extensive curriculum designed for all skill levels, from beginners to advanced users.",
+    titleColor: "text-[#4588EC]",
+    borderStyle: "border-[#4588EC80]",
+    description:
+      "Dive deep into a curriculum designed for all skill levels, from beginner to advanced. Learn at your own pace or accelerate your progress through personalized 1:1 sessions.",
   },
   {
     title: "Hands-On Learning",
-    description: "Apply theoretical concepts directly in Excel and SQL environments, ensuring practical skill development.",
+    borderStyle: "border-[#9747FF80]",
+    titleColor: "text-[#9747FF]",
+    description:
+      "Apply theoretical knowledge directly within SQL and Excel environments. Engage in real-world scenarios that help you develop practical, job-ready skills.",
   },
   {
     title: "Expert-Led Instruction",
-    description: "Benefit from engaging instruction, gaining insights that go beyond the basics for a deeper understanding.",
+    borderStyle: "border-[#1FAF3880]",
+    titleColor: "text-[#1FAF38]",
+    positionStyle:
+      "col-span-full place-self-center xl:col-span-1 xl:place-self-auto",
+    description:
+      "Learn from industry professionals who offer insights beyond the basics. Whether in group classes or 1:1 sessions, you’ll gain knowledge that truly prepares you for the workforce.",
   },
 ];
