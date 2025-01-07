@@ -1,28 +1,27 @@
 import HeroSection from "./HeroSection";
 import WhyLearnSection from "./WhyLearnSection";
-import HowItWorksSection from "./HowItWorksSection/index"
-import ReviewSection from "./ReviewSection copys"
-import CompanyBenefitSection from "./CompanyBenefitSection"
+import HowItWorksSection from "./HowItWorksSection/index";
+import CompanyBenefitSection from "./CompanyBenefitSection";
 import Footer from "./FooterSection/Footer";
-import Header from "../../Layout/Header";
-import CourseListSection from "./CourseListSection";
+import ReviewSection from "./ReviewSection";
 
 const LandingPage = () => {
-
   return (
     <>
-      <Header />
-      <main className="flex flex-col font-plus-jakarta-sans">
+      {/* <Header /> */}
+      <main className="flex flex-col font-SFPro 3xl:max-w-full">
         <HeroSection />
         <WhyLearnSection />
         <HowItWorksSection />
-        <CourseListSection />
         <ReviewSection />
+
+        {/* <CourseListSection /> */}
         <CompanyBenefitSection />
       </main>
+
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
