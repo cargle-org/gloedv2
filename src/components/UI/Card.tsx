@@ -2,13 +2,14 @@ import React from "react";
 
 interface CardProps {
   className?: string;
+  style?: string;
   children: React.ReactNode;
   variant: "primary" | "pricing" | "review" | "course" | "dashboard";
 }
 
 const Card: React.FC<CardProps> = (props) => {
   const cardReviewStyles =
-    "flex flex-shrink-0 rounded-[18.376px] pb-[43.75px] pr-[48.53px] pl-[60.1px] pt-[32.5px]";
+    "flex flex-shrink-0  pt-[32.45px] pb-[32.21px] md:pb-[43.75px] md:pt-[32.45px]";
   const cardHowitWorkStyles =
     "bg-[#F3F5F7] flex flex-shrink-0 rounded-2xl place-content-end items-end hover:scale-105 focus:scale-105 duration-300";
   const cardPricingStyles =
@@ -27,6 +28,7 @@ const Card: React.FC<CardProps> = (props) => {
         ${props.variant === "course" && courseCardStyles} 
         ${props.variant === "dashboard" && dashboardCardStyles} 
         ${props.className}
+        ${props.style}
       `}
     >
       {" "}
