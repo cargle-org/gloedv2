@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     "flex items-center text-center text-nowrap transform transition hover:-translate-y-0.5 focus:outline-none focus:ring focus:ring-offset-0 ";
   const btnPrimary =
     "justify-center font-plus-jakarta-sans px-6 py-3 text-white text-sm sm:text-base font-semibold bg-primary rounded-4xl leading-6 tracking-[-0.32px] hover:bg-primary-light focus:ring-primary-dark focus:ring-opacity-50 active:bg-primary-dark";
-  const btnLandingPage = `${props.style} justify-center text-base px-4 py-2 md:px-6 md:py-3 rounded-lg leading-normal hover:bg-primary-light focus:ring-primary-dark focus:ring-opacity-50 active:bg-primary-dark`;
+  const btnLandingPage = `${props.style} font-SFPro text-center justify-center text-base px-4 py-2 md:px-6 md:py-3 rounded-lg leading-normal hover:bg-primary-light focus:ring-primary-dark focus:ring-opacity-50 active:bg-primary-dark`;
   const btnOptions =
     "justify-center py-1 px-4 2xl:px-5 lg:px-3.5 font-Inter sm:text-sm md:font-semibold sm:font-medium lg:text-base text-white rounded-full";
   const btnAside =
