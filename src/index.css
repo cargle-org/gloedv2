@@ -13,9 +13,12 @@
 }
 
 @media screen and (max-width: 640px) {
+  .bg-img {
+    background-image: url("../src/assets/images/hero_mobile_bg_image.png");
+  }
+
   .react-multi-carousel-item {
     width: 345px !important;
-    /* height: 479px !important; */
     background: linear-gradient(
       90deg,
       rgba(232, 241, 255, 0.2) 0%,
@@ -25,6 +28,10 @@
 }
 
 @media screen and (min-width: 641px) {
+  .bg-img {
+    background-image: url("../src/assets/images/hero_bg_image.png");
+  }
+
   .react-multi-carousel-item {
     width: 488.631px !important;
     height: 519.536px !important;
