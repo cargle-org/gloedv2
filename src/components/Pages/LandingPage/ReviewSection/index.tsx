@@ -26,11 +26,9 @@ const ReviewSection = () => {
 
   useEffect(() => {
     if (isIntersecting) {
-      // ref.current?.querySelector("ul")?.classList.add(classes[0]);
       ref.current?.querySelector("h1")?.classList.add(classes[1]);
       ref.current?.querySelector("p")?.classList.add(classes[2]);
     } else {
-      // ref.current?.querySelector("ul")?.classList.remove(classes[0]);
       ref.current?.querySelector("h1")?.classList.remove(classes[1]);
       ref.current?.querySelector("p")?.classList.remove(classes[2]);
     }

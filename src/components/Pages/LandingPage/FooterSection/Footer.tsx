@@ -6,7 +6,7 @@ import { BsLinkedin, BsSlack, BsTwitterX } from "react-icons/bs";
 import { PiWhatsappLogoFill } from "react-icons/pi";
 
 import { LuInstagram } from "react-icons/lu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 /**
  * Footer component for the website.
@@ -14,8 +14,6 @@ import { Link, useNavigate } from "react-router-dom";
  * @return {JSX.Element} The footer component
  */
 const Footer = () => {
-  const navigate = useNavigate();
-
   const classes = [
     "animate-slideside300",
     "animate-slidein300",
@@ -43,27 +41,27 @@ const Footer = () => {
 
     if (isIntersecting) {
       // ref.current?.querySelector("h1")?.classList.add(classes[0]);
-      ref.current?.querySelectorAll("h1")?.forEach((el, i) => {
+      ref.current?.querySelectorAll("h1")?.forEach((el) => {
         el.classList.add(classes[0]);
       });
-      ref.current?.querySelectorAll("h2")?.forEach((el, i) => {
+      ref.current?.querySelectorAll("h2")?.forEach((el) => {
         el.classList.add(classes[3]);
       });
       // ref.current?.querySelector("p")?.classList.add(classes[3]);
-      ref.current?.querySelectorAll("p")?.forEach((el, i) => {
+      ref.current?.querySelectorAll("p")?.forEach((el) => {
         el.classList.add(classes[0]);
       });
       ref.current?.querySelector("button")?.classList.add(classes[0]);
     } else {
       // ref.current?.querySelector("h1")?.classList.remove(classes[0]);
-      ref.current?.querySelectorAll("h1")?.forEach((el, i) => {
+      ref.current?.querySelectorAll("h1")?.forEach((el) => {
         el.classList.remove(classes[0]);
       });
-      ref.current?.querySelectorAll("h2")?.forEach((el, i) => {
+      ref.current?.querySelectorAll("h2")?.forEach((el) => {
         el.classList.add(classes[3]);
       });
       // ref.current?.querySelector("p")?.classList.remove(classes[3]);
-      ref.current?.querySelectorAll("p")?.forEach((el, i) => {
+      ref.current?.querySelectorAll("p")?.forEach((el) => {
         el.classList.remove(classes[0]);
       });
       ref.current?.querySelector("button")?.classList.remove(classes[0]);

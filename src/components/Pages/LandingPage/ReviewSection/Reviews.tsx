@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import { IoIosStar } from "react-icons/io";
-import howitworks_bg from "../../../../assets/images/howitworks_bg.png";
+// import howitworks_bg from "../../../../assets/images/howitworks_bg.png";
 
 interface ReviewsProps {
   title: string;
@@ -26,7 +26,6 @@ const Reviews = () => {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
       slidesToSlide: 1, // optional, default to 1.
-      // partialVisibilityGutter: 30,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -45,12 +44,10 @@ const Reviews = () => {
       swipeable={false}
       draggable={false}
       showDots={true}
-      // partialVisbile={true}
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
       infinite={true}
       autoPlay={true}
-      // centerMode={true}
       itemAriaLabel="Review"
       autoPlaySpeed={1000}
       keyBoardControl={true}
@@ -70,7 +67,6 @@ const Reviews = () => {
           className={`flex flex-col sm:gap-[34px] w-[345px] lg:max-w-[488.631px] lg:w-[488.631px] animate-slideside300 opacity-0`}
         >
           <div
-            // className="mb-[43.75px]"
             style={{
               // backgroundImage: `url(${howitworks_bg})`,
               // height: "519.536px",
