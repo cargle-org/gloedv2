@@ -62,6 +62,7 @@ module.exports = {
         }
       },
       fontFamily: {
+        "SFPro": ["SF Pro", "ui-sans-serif", "system-ui", "serif"],
         'plus-jakarta-sans': ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'serif'],
         'Inter': ['Inter', 'ui-sans-serif', 'system-ui', 'serif'],
         'Roboto': ['Roboto', 'ui-sans-serif', 'system-ui', 'serif'],

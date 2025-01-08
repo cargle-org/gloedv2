@@ -1,9 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.react-multi-carousel-track {
+  gap: 32.37px;
+}
+
+@media screen and (max-width: 640px) {
+  .react-multi-carousel-item {
+    width: 345px !important;
+    /* height: 479px !important; */
+    background: linear-gradient(
+      90deg,
+      rgba(232, 241, 255, 0.2) 0%,
+      rgba(69, 136, 236, 0.2) 100%
+    );
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .react-multi-carousel-item {
+    width: 488.631px !important;
+    height: 519.536px !important;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 241, 255, 0.2) 0%,
+      rgba(69, 136, 236, 0.2) 100%
+    );
+  }
+}
+
+.custom-dot-list-style {
+  position: relative !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.react-multi-carousel-dot button {
+  margin-right: 13px !important;
+  border-color: #4588ec !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #4588ec !important;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("..src/assets/fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("../src/assets/fonts/SFPRODISPLAYBOLD.OTF") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("../src/assets/fonts/SFPRODISPLAYMEDIUM.OTF") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "SFPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
