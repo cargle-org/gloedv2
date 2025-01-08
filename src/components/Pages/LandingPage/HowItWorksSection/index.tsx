@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import HowItWorks from "./HowItWorks";
 import Button from "../../../UI/Button";
+import { Link } from "react-router-dom";
 
 const HowItWorksSection = () => {
   const classes = [
@@ -69,12 +70,18 @@ const HowItWorksSection = () => {
           <HowItWorks />
         </div>
         <div className="flex items-center justify-center mt-[56px] md:mt-[102px]">
-          <Button
-            variant="primary"
-            className="bg-[#4588EC] font-bold text-base rounded-lg font-Inter px-11 sm:px-[59px] py-[14px] leading-5"
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            to="https://forms.gle/Fe4jx7xPibPoPg82A"
           >
-            Sign Up Now
-          </Button>
+            <Button
+              variant="primary"
+              className="bg-[#4588EC] font-bold text-base rounded-lg font-Inter px-11 sm:px-[59px] py-[14px] leading-5"
+            >
+              Sign Up Now
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

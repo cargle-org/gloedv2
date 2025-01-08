@@ -70,7 +70,11 @@ const HeroSection = () => {
           <div>
             <Logo className="w-[46.312px] sm:w-[66.159px] h-3.5 sm:h-5 blur-0" />
           </div>
-          <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            to="https://forms.gle/Fe4jx7xPibPoPg82A"
+          >
             <Button
               variant="landingPage"
               className="rounded-lg text-[10px] sm:text-xs bg-primary text-white leading-normal font-normal"
@@ -102,7 +106,11 @@ const HeroSection = () => {
           </h2>
           <div className="flex justify-center items-center text-[#FFF] text-center text-xs sm:text-lg md:text-xl font-[274] gap-3.5 sm:gap-6">
             <span>Join a Group Learning Circle </span>
-            <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to="https://forms.gle/Fe4jx7xPibPoPg82A"
+            >
               <Button
                 variant="landingPage"
                 className="sm:px-8 text-center text-xs sm:text-sm bg-primary gap-2 leading-normal font-[590]"

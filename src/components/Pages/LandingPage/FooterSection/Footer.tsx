@@ -101,7 +101,11 @@ const Footer = () => {
               </div>
             </div>
 
-            <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              to="https://forms.gle/Fe4jx7xPibPoPg82A"
+            >
               <Button
                 onClick={() => {}}
                 variant="landingPage"
@@ -127,7 +131,11 @@ const Footer = () => {
                 Get Started
               </div>
               <div className="flex flex-col gap-3 lg:gap-2 2xl:gap-3">
-                <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  to="https://forms.gle/Fe4jx7xPibPoPg82A"
+                >
                   <Button
                     variant="landingPage"
                     className="flex place-self-center sm:place-self-start rounded-lg text-sm text-[#4588EC] bg-white hover:bg-white focus:bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
@@ -165,7 +173,10 @@ const Footer = () => {
                 <Link target="_blank" to="https://gloedworkspace.slack.com">
                   <BsSlack className="size-5" />
                 </Link>
-                <Link target="_blank" to="https://www.linkedin.com/company/gloed-co">
+                <Link
+                  target="_blank"
+                  to="https://www.linkedin.com/company/gloed-co"
+                >
                   <BsLinkedin className="size-5" />
                 </Link>
                 <Link target="_blank" to="https://www.x.com/gloed_co">
