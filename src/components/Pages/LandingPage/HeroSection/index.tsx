@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { ReactTyped } from "react-typed";
-import hero_bg_image from "../../../../assets/images/hero_bg_image.png";
+
+import { Link } from "react-router-dom";
+
 import Button from "../../../UI/Button";
 import Logo from "../../../../assets/svgs/Logo";
+
 import whatsapp_icon from "../../../../assets/svgs/whatsapp_icon.svg";
 import slack from "../../../../assets/svgs/slack.svg";
-import { Link } from "react-router-dom";
 
 /**
  * This function represents the HeroSection component, which includes a section with a heading, text, and buttons.
@@ -58,15 +60,15 @@ const HeroSection = () => {
   return (
     <section
       ref={ref}
-      className="px-3 lg:px-0 font-SFPro lg:bg-center bg-cover bg-no-repeat 3xl:bg-repeat"
+      className={`px-3 lg:px-0 font-SFPro lg:bg-center bg-cover bg-no-repeat 3xl:bg-repeat bg-img`}
       style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${hero_bg_image})`,
+        backgroundColor: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))`,
       }}
     >
       <div className="flex flex-col items-center justify-center max-w-[297px] sm:max-w-full mx-auto mt-[63px] mb-[39px] lg:my-10">
-        <div className="flex flex-shrink-0 mb-[39px] md:mb-[86px] rounded-lg py-2 sm:py-3.5 px-4 sm:px-6 items-center gap-6 sm:gap-10 bg-[#fff]/30 filter blur-[0.5px]">
+        <div className="flex flex-shrink-0 mb-[39px] md:mb-[86px] rounded-lg py-2 sm:py-3.5 px-4 sm:px-6 items-center gap-6 sm:gap-10 bg-[#fff]/30">
           <div>
-            <Logo className="w-[66.159px] h-5" />
+            <Logo className="w-[46.312px] sm:w-[66.159px] h-3.5 sm:h-5 blur-0" />
           </div>
           <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
             <Button
@@ -81,7 +83,7 @@ const HeroSection = () => {
           <span className="text-[#FFF] font-[590]">
             <ReactTyped
               className=""
-              strings={["Unlock Your Data Potential with"]}
+              strings={["Unlock Your Data Potentials with"]}
               typeSpeed={100}
               backSpeed={140}
               loop
@@ -89,7 +91,7 @@ const HeroSection = () => {
           </span>
           <span className="font-bold text-[#61A0FF]">Gloed</span>
         </div>
-        <div className="flex flex-col text-[#FFF] text-center font-SFPro text-sm sm:text-2xl font-[274] leading-normal space-y-1 animate-slidein500 opacity-0 ">
+        <div className="flex flex-col text-[#FFF] text-center font-SFPro text-sm sm:text-2xl font-[274] leading-normal sm:space-y-1 animate-slidein500 opacity-0 ">
           <span>Master SQL, Excel, and More</span>
           <span>Learn from Experts, Build Real Skills</span>
         </div>
@@ -103,19 +105,19 @@ const HeroSection = () => {
             <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
               <Button
                 variant="landingPage"
-                className="sm:px-8 text-xs sm:text-sm bg-primary gap-2 leading-normal font-[590]"
+                className="sm:px-8 text-center text-xs sm:text-sm bg-primary gap-2 leading-normal font-[590]"
               >
-                Sign up
+                Sign Up
               </Button>
             </Link>
           </div>
         </div>
         <div className="flex justify-center items-center flex-col gap-4 md:gap-6 mt-6 sm:mt-[50px]">
           <div className="flex gap-4 md:gap-8">
-            <Link to="https://gloedworkspac.slack.com">
+            <Link target="_blank" to="https://gloedworkspac.slack.com">
               <img src={slack} alt="slack icon" className="size-5" />
             </Link>
-            <Link to="https://chat.whatsapp.com/lui6sziWbKk1nr1OCsmHQn">
+            <Link target="_blank" to="https://bit.ly/3lue6tB">
               <img src={whatsapp_icon} alt="whasapp icon" className="size-5" />
             </Link>
           </div>
