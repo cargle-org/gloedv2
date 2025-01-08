@@ -1,16 +1,17 @@
-import Card from "../../../UI/Card"
-import reviewerone from '../../../../assets/reviewerone.jpg'
-import reviewertwo from '../../../../assets/reviewertwo.jpg'
-import reviewerthree from '../../../../assets/reviewerthree.png'
+import Card from "../../../UI/Card";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+import { IoIosStar } from "react-icons/io";
+import howitworks_bg from "../../../../assets/images/howitworks_bg.png";
 
 interface ReviewsProps {
-  title: string,
-  body: string,
-  img: string,
-  alt: string,
-  name: string,
-  role: string,
-  company: string,
+  title: string;
+  body: string;
+  alt: string;
+  name: string;
+  role: string;
+  company: string;
 }
 
 /**
@@ -20,61 +21,121 @@ interface ReviewsProps {
  */
 
 const Reviews = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 1, // optional, default to 1.
+      // partialVisibilityGutter: 30,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 426, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
   return (
-    <ul className="flex flex-wrap animate-slideside300 opacity-0 container 2xl:max-w-[1200px] mx-auto gap-6 items-center justify-center">
+    <Carousel
+      swipeable={false}
+      draggable={false}
+      showDots={true}
+      // partialVisbile={true}
+      responsive={responsive}
+      ssr={true} // means to render carousel on server-side.
+      infinite={true}
+      autoPlay={true}
+      // centerMode={true}
+      itemAriaLabel="Review"
+      autoPlaySpeed={1000}
+      keyBoardControl={true}
+      customTransition="all 300ms ease-in-out"
+      transitionDuration={1000}
+      containerClass="carousel-container xl:mx-20 pb-[86.87px] sm:pb-[74px]"
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      // deviceType={this.props.deviceType}
+      dotListClass="custom-dot-list-style"
+      renderDotsOutside={true}
+      itemClass="w-[345px] md:w-[488.631px] rounded-[18.376px]"
+    >
       {reviews.map((review, index) => (
-        <Card key={index} variant="review" className="w-[285px] sm:w-[300px] md:w-[384px]">
-          <h3 className="text-white font-semibold text-[17px] md:text-lg leading-[27px] tracking-[-0.36px]">
-            {review.title}
-          </h3>
-          <p className="pt-3 sm:pt-4 text-[#F3F5F7] h-40 font-medium text-left leading-6 tracking-[-0.32px]">
-            "{review.body}"
-          </p>
-          <div className="border my-7 opacity-20 border-[#90A3BF]"></div>
-          <div className="flex gap-3.5 md:gap-5">
-            <img width="70" height="70" src={review.img} className="flex items-start object-cover rounded-[12px]" alt={review.alt} />
-            <h3 className="md:flex items-center text-white text-sm font-bold h-18 leading-[21px] tracking-[-0.42px]">
-              {review.name}, {review.role}, {review.company}
-            </h3>
+        <Card
+          key={index}
+          variant="review"
+          className={`flex flex-col sm:gap-[34px] w-[345px] lg:max-w-[488.631px] lg:w-[488.631px] animate-slideside300 opacity-0`}
+        >
+          <div
+            // className="mb-[43.75px]"
+            style={{
+              // backgroundImage: `url(${howitworks_bg})`,
+              // height: "519.536px",
+              background: `linear-gradient( lightgray 50%)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          >
+            <span className="w-[26.794px] h-[50.57px] sm:w-[35.142px] pl-[16.49px] lg:pl-[29.59px] flex-shrink-0 font-Inter font-bold text-[72.016px] leading-normal sm:mb-[37.23px]">
+              “
+            </span>
+            <p className="mb-[30px] self-stretch text-[#212121] pl-[39.85px] pr-[15.41px] lg:pl-[60.1px] h-[120px] lg:h-[169px] font-[274] text-left text-sm md:text-xl leading-6 md:leading-7">
+              {review.body}
+            </p>
+            <span className="flex items-center justify-center mb-[55.24px] sm:mb-[41.24px]">
+              <IoIosStar color="#FFA43C" className="size-6" />
+              <IoIosStar color="#FFA43C" className="size-6" />
+              <IoIosStar color="#FFA43C" className="size-6" />
+              <IoIosStar color="#FFA43C" className="size-6" />
+              <IoIosStar color="#FFA43C" className="size-6" />
+              <IoIosStar color="#FFA43C" className="size-6" />
+            </span>
+            <div className="flex flex-col items-center gap-[15.49px] sm:gap-[12.49px]">
+              <span className="flex items-center text-[#212121] text-xl md:text-[22.505px] font-bold h-18 leading-normal">
+                {review.name}
+              </span>
+              <p className="flex items-center text-[#212121] text-sm md:text-base font-bold h-18 leading-6">
+                {review.role}, {review.company}
+              </p>
+            </div>
           </div>
         </Card>
-      ))
-      }
-    </ul >
-  )
-}
+      ))}
+      "
+    </Carousel>
+  );
+};
 
-export default Reviews
+export default Reviews;
 
 export const reviews: ReviewsProps[] = [
   {
-    "title": "Data is everything & Gloed helps",
-    "body": "I had a 10 mins class sesssion over a whatsapp call, and it was phenomenal - \
+    title: "Data is everything & Gloed helps",
+    body: "I had a 10 mins class sesssion over a whatsapp call, and it was phenomenal - \
      I learnt within 10 mins, what now saves me 8hrs weekly. Thanks Gloed",
-    "img": reviewerone,
-    "alt": "first reviewer image",
-    "name": "Roland",
-    "role": "Data Analyst",
-    "company": ""
+    alt: "first reviewer image",
+    name: "Roland",
+    role: "Data Analyst",
+    company: "",
   },
   {
-    "title": "Satisfied User Here!",
-    "body": "The platform is self explanatory, and easy to use. You can easily get your way around it with little or no supervision",
-    "img": reviewertwo,
-    "alt": "second reviewer image",
-    "name": "Olayinka",
-    "role": "Product Manager",
-    "company": ""
+    title: "Satisfied User Here!",
+    body: "The platform is self explanatory, and easy to use. You can easily get your way around it with little or no supervision",
+    alt: "second reviewer image",
+    name: "Olayinka",
+    role: "Product Manager",
+    company: "",
   },
   {
-    "title": "My projects & work are better now.",
-    "body": "With Gloed's practical approach, we were encouraged to apply what we learned. This made the material \
+    title: "My projects & work are better now.",
+    body: "With Gloed's practical approach, we were encouraged to apply what we learned. This made the material \
     more engaging and also gave the confidence to start using SQL in my projects and work.",
-    "img": reviewerthree,
-    "alt": "third reviewer image",
-    "name": "Peter",
-    "role": "Data Analyst",
-    "company": ""
+    alt: "third reviewer image",
+    name: "Peter",
+    role: "Data Analyst",
+    company: "",
   },
-
-]
+];
