@@ -43,7 +43,7 @@ const HowItWorksSection = () => {
   return (
     <section
       ref={ref}
-      className="font-SFPro flex flex-col bg-[#EFF5FF] sm:py-16 pt-[86px] pb-[60px] px-3 sm:px-20 xl:px-5 2xl:px-20"
+      className="font-SFPro flex flex-col bg-[#EFF5FF] sm:py-16 pt-[86px] pb-[60px] px-3 sm:mx-auto md:mx-0 md:px-20 xl:px-5 2xl:px-20"
     >
       <div className="xl:max-w-[1100px] 2xl:max-w-full 3xl:max-w-[1440px] mx-auto">
         <div className="flex flex-col justify-center items-center">

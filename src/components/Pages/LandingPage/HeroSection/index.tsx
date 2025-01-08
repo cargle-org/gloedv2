@@ -83,7 +83,7 @@ const HeroSection = () => {
             </Button>
           </Link>
         </div>
-        <div className="w-full h-[80px] sm:h-32 lg:h-48 md:max-w-[726px] mb-4 md:mb-2 text-center font-SFPro text-[30px] sm:text-[50px] lg:text-[80px] leading-tight lg:leading-[95px] tracking-tight">
+        <div className="w-full h-[80px] sm:h-36 lg:h-48 md:max-w-[726px] mb-4 md:mb-2 text-center font-SFPro text-[30px] sm:text-[43px] md:text-[57px] lg:text-[75px] leading-tight lg:leading-[95px] tracking-tight">
           <span className="text-[#FFF] font-[590]">
             <ReactTyped
               className=""
@@ -100,7 +100,7 @@ const HeroSection = () => {
           <span>Learn from Experts, Build Real Skills</span>
         </div>
 
-        <div className="mt-[56px] sm:mt-[90px] text-center font-SFPro leading-normal space-y-3.5 sm:space-y-4">
+        <div className="mt-[56px] md:mt-[90px] text-center font-SFPro leading-normal space-y-3.5 sm:space-y-4">
           <h2 className="text-[#FFF] text-center text-base sm:text-2xl md:text-[32px] font-[590]">
             Start Your Learning Journey Today
           </h2>
