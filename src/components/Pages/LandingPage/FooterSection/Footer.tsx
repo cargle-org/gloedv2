@@ -6,6 +6,7 @@ import { BsLinkedin, BsSlack, BsTwitterX } from "react-icons/bs";
 import { PiWhatsappLogoFill } from "react-icons/pi";
 
 import { LuInstagram } from "react-icons/lu";
+import { Link, useNavigate } from "react-router-dom";
 
 /**
  * Footer component for the website.
@@ -13,6 +14,8 @@ import { LuInstagram } from "react-icons/lu";
  * @return {JSX.Element} The footer component
  */
 const Footer = () => {
+  const navigate = useNavigate();
+
   const classes = [
     "animate-slideside300",
     "animate-slidein300",
@@ -99,12 +102,16 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <Button
-              variant="landingPage"
-              className="flex place-self-center sm:place-self-start justify-center rounded-lg text-sm md:text-base text-[#4588EC] bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8 animate-slid300 opacity-0"
-            >
-              Sign Up for Classes Now
-            </Button>
+
+            <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+              <Button
+                onClick={() => {}}
+                variant="landingPage"
+                className="flex place-self-center sm:place-self-start justify-center rounded-lg text-sm md:text-base text-[#4588EC] hover:bg-white focus:bg-white bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8 animate-slid300 opacity-0"
+              >
+                Sign Up for Classes Now
+              </Button>
+            </Link>
           </div>
           <div className="flex flex-col gap-12 lg:gap-6 2xl:gap-12">
             <div className="flex flex-col gap-6">
@@ -122,12 +129,15 @@ const Footer = () => {
                 Get Started
               </div>
               <div className="flex flex-col gap-3 lg:gap-2 2xl:gap-3">
-                <Button
-                  variant="landingPage"
-                  className="flex place-self-center sm:place-self-start rounded-lg text-sm text-[#4588EC] bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
-                >
-                  Sign Up for Classes Now
-                </Button>
+                <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+                  <Button
+                    variant="landingPage"
+                    className="flex place-self-center sm:place-self-start rounded-lg text-sm text-[#4588EC] bg-white hover:bg-white focus:bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
+                  >
+                    Sign Up for Classes Now
+                  </Button>
+                </Link>
+
                 <Button
                   variant="landingPage"
                   className="flex place-self-center sm:place-self-start rounded-lg text-sm bg-[#5E00D8] text-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
@@ -154,11 +164,21 @@ const Footer = () => {
                 <Logo />
               </div>
               <div className="flex gap-2 items-center">
-                <BsSlack className="size-5" />
-                <BsLinkedin className="size-5" />
-                <BsTwitterX className="size-5" />
-                <LuInstagram className="size-5" />
-                <PiWhatsappLogoFill className="size-6" />
+                <Link to="https://gloedworkspace.slack.com">
+                  <BsSlack className="size-5" />
+                </Link>
+                <Link to="https://www.linkedin.com/company/gloed-co">
+                  <BsLinkedin className="size-5" />
+                </Link>
+                <Link to="https://www.x.com/gloed_co">
+                  <BsTwitterX className="size-5" />
+                </Link>
+                <Link to="https://www.instagram.com/gloed_co">
+                  <LuInstagram className="size-5" />
+                </Link>
+                <Link to="https://chat.whatsapp.com/lui6sziWbKk1nr1OCsmHQn">
+                  <PiWhatsappLogoFill className="size-6 cursor-pointer" />
+                </Link>
               </div>
             </div>
             <div className="flex items-end text-SFPro text-sm xl:text-base mb-4 md:mb-0 text-[#212121] leading-6 tracking-[-0.32px]">

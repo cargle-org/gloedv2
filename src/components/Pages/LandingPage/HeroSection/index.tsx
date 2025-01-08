@@ -5,6 +5,7 @@ import Button from "../../../UI/Button";
 import Logo from "../../../../assets/svgs/Logo";
 import whatsapp_icon from "../../../../assets/svgs/whatsapp_icon.svg";
 import slack from "../../../../assets/svgs/slack.svg";
+import { Link } from "react-router-dom";
 
 /**
  * This function represents the HeroSection component, which includes a section with a heading, text, and buttons.
@@ -67,12 +68,14 @@ const HeroSection = () => {
           <div>
             <Logo className="w-[66.159px] h-5" />
           </div>
-          <Button
-            variant="landingPage"
-            className="rounded-lg text-[10px] sm:text-xs bg-primary text-white leading-normal font-normal"
-          >
-            Join Community
-          </Button>
+          <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+            <Button
+              variant="landingPage"
+              className="rounded-lg text-[10px] sm:text-xs bg-primary text-white leading-normal font-normal"
+            >
+              Join Community
+            </Button>
+          </Link>
         </div>
         <div className="w-full h-[80px] sm:h-32 lg:h-48 md:max-w-[726px] mb-4 md:mb-2 text-center font-SFPro text-[32px] sm:text-[50px] lg:text-[80px] leading-tight lg:leading-[95px] tracking-tight">
           <span className="text-[#FFF] font-[590]">
@@ -97,18 +100,24 @@ const HeroSection = () => {
           </h2>
           <div className="flex justify-center items-center text-[#FFF] text-center text-xs sm:text-lg md:text-xl font-[274] gap-3.5 sm:gap-6">
             <span>Join a Group Learning Circle </span>
-            <Button
-              variant="landingPage"
-              className="sm:px-8 text-xs sm:text-sm bg-primary gap-2 leading-normal font-[590]"
-            >
-              Sign up
-            </Button>
+            <Link to="https://forms.gle/Fe4jx7xPibPoPg82A">
+              <Button
+                variant="landingPage"
+                className="sm:px-8 text-xs sm:text-sm bg-primary gap-2 leading-normal font-[590]"
+              >
+                Sign up
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center items-center flex-col gap-4 md:gap-6 mt-6 sm:mt-[50px]">
           <div className="flex gap-4 md:gap-8">
-            <img src={slack} alt="slack icon" className="size-5" />
-            <img src={whatsapp_icon} alt="whasapp icon" className="size-5" />
+            <Link to="https://gloedworkspac.slack.com">
+              <img src={slack} alt="slack icon" className="size-5" />
+            </Link>
+            <Link to="https://chat.whatsapp.com/lui6sziWbKk1nr1OCsmHQn">
+              <img src={whatsapp_icon} alt="whasapp icon" className="size-5" />
+            </Link>
           </div>
           <span className="text-[#FFF] text-center text-xs sm:text-base font-[590]">
             5,000+ Students
