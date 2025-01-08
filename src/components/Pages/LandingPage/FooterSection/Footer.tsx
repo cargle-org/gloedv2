@@ -162,19 +162,19 @@ const Footer = () => {
                 <Logo />
               </div>
               <div className="flex gap-2 items-center">
-                <Link to="https://gloedworkspace.slack.com">
+                <Link target="_blank" to="https://gloedworkspace.slack.com">
                   <BsSlack className="size-5" />
                 </Link>
-                <Link to="https://www.linkedin.com/company/gloed-co">
+                <Link target="_blank" to="https://www.linkedin.com/company/gloed-co">
                   <BsLinkedin className="size-5" />
                 </Link>
-                <Link to="https://www.x.com/gloed_co">
+                <Link target="_blank" to="https://www.x.com/gloed_co">
                   <BsTwitterX className="size-5" />
                 </Link>
-                <Link to="https://www.instagram.com/gloed_co">
+                <Link target="_blank" to="https://www.instagram.com/gloed_co">
                   <LuInstagram className="size-5" />
                 </Link>
-                <Link to="https://chat.whatsapp.com/lui6sziWbKk1nr1OCsmHQn">
+                <Link target="_blank" to="https://bit.ly/3lue6tB">
                   <PiWhatsappLogoFill className="size-6 cursor-pointer" />
                 </Link>
               </div>
