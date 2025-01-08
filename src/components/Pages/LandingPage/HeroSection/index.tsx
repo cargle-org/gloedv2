@@ -83,7 +83,7 @@ const HeroSection = () => {
             </Button>
           </Link>
         </div>
-        <div className="w-full h-[80px] sm:h-32 lg:h-48 md:max-w-[726px] mb-4 md:mb-2 text-center font-SFPro text-[32px] sm:text-[50px] lg:text-[80px] leading-tight lg:leading-[95px] tracking-tight">
+        <div className="w-full h-[80px] sm:h-32 lg:h-48 md:max-w-[726px] mb-4 md:mb-2 text-center font-SFPro text-[30px] sm:text-[50px] lg:text-[80px] leading-tight lg:leading-[95px] tracking-tight">
           <span className="text-[#FFF] font-[590]">
             <ReactTyped
               className=""
