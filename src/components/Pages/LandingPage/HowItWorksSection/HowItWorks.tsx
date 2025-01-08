@@ -77,7 +77,7 @@ export const howItWorks: HowItWorksProps[] = [
     indexBg: "bg-[#F0E5FF]",
     stepIcon: arrow_two,
     stepMobileIcon: arrow_three,
-    iconStyle: "hidden 2xl:flex sm:-right-8 sm:bottom-[145px]",
+    iconStyle: "hidden 2xl:flex sm:-right-8 sm:bottom-[150px]",
     title: "Select Your Course & Learning Style",
     titleColor: "text-[#5E00D8]",
     details:
