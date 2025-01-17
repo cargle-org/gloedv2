@@ -35,7 +35,8 @@ const Reviews = () => {
     mobile: {
       breakpoint: { max: 426, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      // partialVisibilityGutter: 30,
+      // slidesToSlide: 1, // optional, default to 1.
     },
   };
 
@@ -46,25 +47,31 @@ const Reviews = () => {
       showDots={true}
       responsive={responsive}
       ssr={true} // means to render carousel on server-side.
-      infinite={true}
+      infinite
       autoPlay={true}
       itemAriaLabel="Review"
-      autoPlaySpeed={1000}
+      autoPlaySpeed={4000}
+      centerMode={false}
+      shouldResetAutoplay={false}
+      rewind={false}
+      rtl={false}
+      slidesToSlide={1}
+      // additionalTransfrom={0}
       keyBoardControl={true}
-      customTransition="all 300ms ease-in-out"
-      transitionDuration={1000}
+      customTransition="all 1000ms ease-in-out"
+      transitionDuration={1500}
       containerClass="carousel-container xl:mx-20 pb-[86.87px] sm:pb-[74px]"
       removeArrowOnDeviceType={["tablet", "mobile"]}
       // deviceType={this.props.deviceType}
       dotListClass="custom-dot-list-style"
       renderDotsOutside={true}
-      itemClass="w-[345px] md:w-[488.631px] rounded-[18.376px]"
+      itemClass=" sm:w-[345px] md:w-[488.631px] rounded-[18.376px]"
     >
       {reviews.map((review, index) => (
         <Card
           key={index}
           variant="review"
-          className={`flex flex-col sm:gap-[34px] w-[345px] lg:max-w-[488.631px] lg:w-[488.631px] animate-slideside300 opacity-0`}
+          className={`flex flex-col sm:gap-[34px] w-[300px] sm:w-[345px] lg:max-w-[488.631px] lg:w-[488.631px] animate-slideside300 opacity-0`}
         >
           <div
             style={{
@@ -100,7 +107,6 @@ const Reviews = () => {
           </div>
         </Card>
       ))}
-      "
     </Carousel>
   );
 };

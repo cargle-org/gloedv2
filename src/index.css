@@ -8,13 +8,28 @@
 @tailwind components;
 @tailwind utilities;
 
-.react-multi-carousel-track {
-  gap: 32.37px;
-}
+@media screen and (max-width: 425px) {
+  .react-multi-carousel-track {
+    gap: 15px;
+  }
 
-@media screen and (max-width: 640px) {
   .bg-img {
     background-image: url("../src/assets/images/hero_mobile_bg_image.png");
+  }
+
+  .react-multi-carousel-item {
+    width: 300px !important;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 241, 255, 0.2) 0%,
+      rgba(69, 136, 236, 0.2) 100%
+    );
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .react-multi-carousel-track {
+    gap: 0px;
   }
 
   .react-multi-carousel-item {
@@ -28,6 +43,10 @@
 }
 
 @media screen and (min-width: 641px) {
+  .react-multi-carousel-track {
+    gap: 32.37px;
+  }
+
   .bg-img {
     background-image: url("../src/assets/images/hero_bg_image.png");
   }
