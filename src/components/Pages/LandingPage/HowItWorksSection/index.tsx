@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import HowItWorks from "./HowItWorks";
 import Button from "../../../UI/Button";
 import ReusableModal from "../../../UI/ReusableModal";
-import { Link } from "react-router-dom";
+
 
 const HowItWorksSection = () => {
   const classes = [
