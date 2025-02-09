@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "../../../UI/Button";
+import ReusableModal from "../../../UI/ReusableModal";
 import Logo from "../../../../assets/svgs/Logo";
 
 import { BsLinkedin, BsSlack, BsTwitterX } from "react-icons/bs";
@@ -21,7 +22,16 @@ const Footer = () => {
     "animate-slidein700",
   ];
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<JSX.Element>(<></>);
+  const [modalTitle, setModalTitle] = useState("");
   const ref = useRef<HTMLDivElement>(null);
+
+  const openModal = (title: string, content: JSX.Element) => {
+    setModalTitle(title);
+    setModalContent(content);
+    setIsModalOpen(true);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -101,19 +111,20 @@ const Footer = () => {
               </div>
             </div>
 
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              to="https://forms.gle/Fe4jx7xPibPoPg82A"
-            >
-              <Button
-                onClick={() => {}}
-                variant="landingPage"
-                className="flex place-self-center sm:place-self-start justify-center rounded-lg text-sm md:text-base text-[#4588EC] hover:bg-white focus:bg-white bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8 animate-slid300 opacity-0"
-              >
-                Sign Up for Classes Now
-              </Button>
-            </Link>
+            <Button
+                    variant="landingPage"
+                    className="flex place-self-center sm:place-self-start rounded-lg text-sm text-[#4588EC] bg-white hover:bg-white focus:bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8" 
+                    onClick={() => openModal("Sign Up for Classes", (
+                      <iframe
+                        src="https://gloed.kit.com/e8e33e0f0d"
+                        className="w-full h-[500px] rounded-lg"
+                        
+                        title="Registration Form"
+                      ></iframe>
+                    ))}
+                  >
+                    Sign Up for Classes Now
+            </Button>
           </div>
           <div className="flex flex-col gap-12 lg:gap-6 2xl:gap-12">
             <div className="flex flex-col gap-6">
@@ -131,28 +142,47 @@ const Footer = () => {
                 Get Started
               </div>
               <div className="flex flex-col gap-3 lg:gap-2 2xl:gap-3">
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  to="https://forms.gle/Fe4jx7xPibPoPg82A"
-                >
+                
                   <Button
                     variant="landingPage"
-                    className="flex place-self-center sm:place-self-start rounded-lg text-sm text-[#4588EC] bg-white hover:bg-white focus:bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
+                    className="flex place-self-center sm:place-self-start rounded-lg text-sm text-[#4588EC] bg-white hover:bg-white focus:bg-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8" 
+                    onClick={() => openModal("Sign Up for Classes", (
+                      <iframe
+                        src="https://gloed.kit.com/e8e33e0f0d"
+                        className="w-full h-[500px] rounded-lg"
+                        
+                        title="Registration Form"
+                      ></iframe>
+                    ))}
                   >
                     Sign Up for Classes Now
                   </Button>
-                </Link>
 
                 <Button
                   variant="landingPage"
                   className="flex place-self-center sm:place-self-start rounded-lg text-sm bg-[#5E00D8] text-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
+                  onClick={() => openModal("Become A Tutor", (
+                    <iframe
+                      src="https://gloed.kit.com/827f161c19"
+                      className="w-full h-[500px] rounded-lg"
+                      
+                      title="Registration Form"
+                    ></iframe>
+                  ))}
                 >
                   Become A Tutor
                 </Button>
                 <Button
                   variant="landingPage"
                   className="flex place-self-center sm:place-self-start rounded-lg text-sm bg-[#1FAF38] text-white w-full sm:w-1/2 lg:w-full 2xl:sm:w-1/2 px-8"
+                  onClick={() => openModal("Contact Us", (
+                    <iframe
+                      src="https://gloed.kit.com/69cb0ee471"
+                      className="w-full h-[500px] rounded-lg"
+                      
+                      title="Registration Form"
+                    ></iframe>
+                  ))}
                 >
                   Contact Us For More Info
                 </Button>
@@ -201,6 +231,13 @@ const Footer = () => {
           <div className="">Support</div>
         </nav>
       </section>
+
+      <ReusableModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={modalTitle}
+        content={modalContent}
+      />
     </footer>
   );
 };

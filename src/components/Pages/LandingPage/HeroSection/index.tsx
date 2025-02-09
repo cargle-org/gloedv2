@@ -4,6 +4,7 @@ import { ReactTyped } from "react-typed";
 import { Link } from "react-router-dom";
 
 import Button from "../../../UI/Button";
+import ReusableModal from "../../../UI/ReusableModal";
 import Logo from "../../../../assets/svgs/Logo";
 
 import whatsapp_icon from "../../../../assets/svgs/whatsapp_icon.svg";
@@ -24,6 +25,17 @@ const HeroSection = () => {
     "animate-slidein700",
   ];
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<JSX.Element>(<></>);
+  const [modalTitle, setModalTitle] = useState("");
+  
+
+  const openModal = (title: string, content: JSX.Element) => {
+    setModalTitle(title);
+    setModalContent(content);
+    setIsModalOpen(true);
+  };
+
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -70,18 +82,22 @@ const HeroSection = () => {
           <div>
             <Logo className="w-[46.312px] sm:w-[66.159px] h-3.5 sm:h-5 blur-0" />
           </div>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            to="https://forms.gle/Fe4jx7xPibPoPg82A"
-          >
+
             <Button
               variant="landingPage"
               className="rounded-lg text-[10px] sm:text-xs bg-primary text-white leading-normal font-normal"
+              onClick={() => openModal("Join Community", (
+                <iframe
+                  src="https://gloed.kit.com/8838211532"
+                  className="w-full h-[500px] rounded-lg"
+                  
+                  title="Join Community"
+                ></iframe>
+              ))}
             >
               Join Community
             </Button>
-          </Link>
+
         </div>
         <div className="w-full h-[80px] sm:h-36 lg:h-48 md:max-w-[726px] mb-4 md:mb-2 text-center font-SFPro text-[30px] sm:text-[43px] md:text-[57px] lg:text-[75px] leading-tight lg:leading-[95px] tracking-tight">
           <span className="text-[#FFF] font-[590]">
@@ -106,18 +122,21 @@ const HeroSection = () => {
           </h2>
           <div className="flex justify-center items-center text-[#FFF] text-center text-xs sm:text-lg md:text-xl font-[274] gap-3.5 sm:gap-6">
             <span>Join a Group Learning Circle </span>
-            <Link
-              target="_blank"
-              rel="noopener noreferrer"
-              to="https://forms.gle/Fe4jx7xPibPoPg82A"
-            >
+
               <Button
                 variant="landingPage"
                 className="sm:px-8 text-center text-xs sm:text-sm bg-primary gap-2 leading-normal font-[590]"
+                onClick={() => openModal("Sign Up", (
+                  <iframe
+                    src="https://gloed.kit.com/e8e33e0f0d"
+                    className="w-full h-[500px] rounded-lg"
+                    
+                    title="Registration Form"
+                  ></iframe>
+                ))}
               >
                 Sign Up
               </Button>
-            </Link>
           </div>
         </div>
         <div className="flex justify-center items-center flex-col gap-4 md:gap-6 mt-6 sm:mt-[50px]">
@@ -134,6 +153,13 @@ const HeroSection = () => {
           </span>
         </div>
       </div>
+
+      <ReusableModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={modalTitle}
+        content={modalContent}
+      />
     </section>
   );
 };

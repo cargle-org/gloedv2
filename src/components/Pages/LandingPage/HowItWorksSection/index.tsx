@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import HowItWorks from "./HowItWorks";
 import Button from "../../../UI/Button";
+import ReusableModal from "../../../UI/ReusableModal";
 import { Link } from "react-router-dom";
 
 const HowItWorksSection = () => {
@@ -11,6 +12,16 @@ const HowItWorksSection = () => {
     "animate-slidein700",
   ];
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<JSX.Element>(<></>);
+  const [modalTitle, setModalTitle] = useState("");
+  
+
+  const openModal = (title: string, content: JSX.Element) => {
+    setModalTitle(title);
+    setModalContent(content);
+    setIsModalOpen(true);
+  };
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -70,20 +81,31 @@ const HowItWorksSection = () => {
           <HowItWorks />
         </div>
         <div className="flex items-center justify-center mt-[56px] md:mt-[102px]">
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            to="https://forms.gle/Fe4jx7xPibPoPg82A"
-          >
+        
             <Button
               variant="primary"
               className="bg-[#4588EC] font-bold text-base rounded-lg font-Inter px-11 sm:px-[59px] py-[14px] leading-5"
+              onClick={() => openModal("Sign Up for Classes", (
+                <iframe
+                  src="https://gloed.kit.com/e8e33e0f0d"
+                  className="w-full h-[500px] rounded-lg"
+                  
+                  title="Registration Form"
+                ></iframe>
+              ))}
             >
               Sign Up Now
             </Button>
-          </Link>
+
         </div>
       </div>
+
+      <ReusableModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={modalTitle}
+        content={modalContent}
+      />
     </section>
   );
 };
